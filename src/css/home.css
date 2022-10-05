@@ -216,7 +216,7 @@ body {
 .block-6 .container .iphone-pro {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 6rem;
   max-height: 37.5rem;
 }
 .bl6-content {
