@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500;700&display=swap");
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  overflow-x: hidden;
+}
+.logo-img {
+  width: 36px;
+  height: 35px;
+}
+.brand-name-img {
+  width: 102px;
+  height: 32px;
+}
+.block-1-right {
+  position: relative;
+  background: linear-gradient(
+      70.11deg,
+      rgba(198, 235, 255, 0.4) 0.4%,
+      rgba(219, 238, 255, 0.4) 22.71%,
+      rgba(198, 235, 255, 0.4) 49.68%,
+      rgba(234, 231, 255, 0.4) 75.62%,
+      rgba(247, 247, 221, 0.4) 93.26%
+    ),
+    #ffffff;
+  border-radius: 30px;
+  height: 100vh;
+  max-height: 900px;
+}
+.block-1-right img {
+  position: absolute;
+}
+.phone-img {
+  width: 9.75rem;
+  top: 0;
+  left: 5.25rem;
+}
+.tether-img {
+  width: 10rem;
+  top: 5.5rem;
+  left: -6rem;
+}
+.chainlink-img {
+  width: 11rem;
+  bottom: 2rem;
+  right: 9rem;
+}
+.iphone-14-pro-img {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 0 30px;
+}
+.card-img {
+  width: 15rem;
+  top: -2.5rem;
+  right: -4rem;
+}
+.bitcoin-img {
+  width: 15rem;
+  bottom: 7.5rem;
+  right: -6rem;
+}
+.block-2 {
+  height: 100vh;
+  padding: 4rem;
+  background: linear-gradient(
+      70.11deg,
+      rgba(198, 235, 255, 0.4) 0.4%,
+      rgba(219, 238, 255, 0.4) 22.71%,
+      rgba(198, 235, 255, 0.4) 49.68%,
+      rgba(234, 231, 255, 0.4) 75.62%,
+      rgba(247, 247, 221, 0.4) 93.26%
+    ),
+    #ffffff;
+}
+.block-3 {
+  position: relative;
+  height: 100%;
+}
+.block-3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 20%;
+  background: linear-gradient(
+    90.99deg,
+    rgba(242, 165, 63, 0.15) -30.85%,
+    rgba(235, 83, 136, 0.15) 5.25%,
+    rgba(91, 21, 241, 0.15) 41.35%,
+    rgba(83, 170, 247, 0.15) 78.21%,
+    rgba(83, 247, 139, 0.15) 116.62%
+  );
+  filter: blur(100px);
+}
+.process-bar {
+  width: 100%;
+  height: 5px;
+  background: rgba(10, 8, 58, 0.1);
+  border-radius: 20px;
+}
+.step-img {
+  position: relative;
+  width: 120%;
+}
+.step-img img {
+  z-index: 10;
+  width: 100%;
+}
+.step-img::before {
+  content: "";
+  position: absolute;
+  width: 490px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(91, 197, 237, 0.2);
+  filter: blur(75px);
+}
+@media screen and (max-width: 1440px) {
+  .step-img {
+    width: 100%;
+  }
+  .step-img img {
+    min-width: 100%;
+  }
+  .step-img::before {
+    width: 100%;
+  }
+}
+.block-4 {
+  background-image: url("../assets/block-4/background.png");
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
+}
+.video-frame {
+  position: relative;
+  width: 836px;
+  height: 692px;
+  margin-right: -80px;
+}
+.video-frame img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.video-frame video {
+  position: absolute;
+  width: 716px;
+  height: 540px;
+  border-radius: 0px 20px;
+  top: 38px;
+  right: 0;
+}
+@media screen and (max-width: 1400px) {
+  .video-frame {
+    width: 689px;
+    height: 522px;
+  }
+  .video-frame video {
+    width: 590px;
+    height: 408px;
+    top: 30px;
+    border-radius: 0px 16px;
+  }
+}
+.bg-block-4 {
+  background: linear-gradient(
+      70.11deg,
+      rgba(198, 235, 255, 0.4) 0.4%,
+      rgba(219, 238, 255, 0.4) 22.71%,
+      rgba(198, 235, 255, 0.4) 49.68%,
+      rgba(234, 231, 255, 0.4) 75.62%,
+      rgba(247, 247, 221, 0.4) 93.26%
+    ),
+    #ffffff;
+  border-radius: 1.875rem;
+  padding: 1.875rem;
+}
+.ava-img img {
+  width: 120%;
+  max-width: none;
+}
+.apple-watch {
+  position: relative;
+}
+.apple-watch img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.platforms-group {
+  position: relative;
+  height: 100%;
+}
+.platforms-group-img {
+  position: absolute;
+  bottom: 1.875rem;
+  height: 374px;
+  width: 100%;
+  overflow: hidden;
+}
+.platforms-group-img img {
+  max-width: initial;
+  height: 100%;
+}
+.block-6 .container {
+  position: relative;
+}
+.block-6 .container .iphone-pro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-height: 37.5rem;
+}
+.bl6-content {
+  background-image: url("../assets/block-4/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 6.25rem;
+  left: 0;
+  width: 100%;
+  min-height: 27.5rem;
+  justify-content: center;
+  padding-left: 30%;
+}
+.block-7 {
+  background-image: url("../assets/block-4/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.item-content {
+  background: linear-gradient(
+    90.97deg,
+    #c4e0f5 0.83%,
+    #edf6fb 32.59%,
+    #a0cfe9 69.46%,
+    #a5bacd 99.17%
+  );
+  box-shadow: 0px 11px 40px rgba(0, 118, 255, 0.1);
+}
+.icon {
+  width: 43px;
+  height: 43px;
+}
