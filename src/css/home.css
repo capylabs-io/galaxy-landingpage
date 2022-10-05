@@ -25,6 +25,7 @@ body {
   border-radius: 30px;
   height: 100vh;
   max-height: 900px;
+  min-height: 714px;
 }
 .block-1-right img {
   position: absolute;
@@ -62,7 +63,8 @@ body {
   right: -6rem;
 }
 .block-2 {
-  height: 100vh;
+  height: 100%;
+  max-height: 900px;
   padding: 4rem;
   background: linear-gradient(
       70.11deg,
@@ -104,6 +106,7 @@ body {
 .step-img {
   position: relative;
   width: 120%;
+  opacity: 0;
 }
 .step-img img {
   z-index: 10;

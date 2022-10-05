@@ -8,6 +8,7 @@
     <link rel="icon" href="favicon.ico" />
     <link href="src/css/home.css" rel="stylesheet">
     <link href="src/css/styles.css" rel="stylesheet">
+    <link href="src/css/transation.css" rel="stylesheet">
     <script src="src/js/main.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Galaxy Landing Page</title>
@@ -15,7 +16,7 @@
 
 <body>
     <div class="w-full">
-        <div class="container mx-auto block-1 grid lg:grid-cols-2 gap-10 py-14 px-24">
+        <div id="block-1" class="container mx-auto block-1 grid lg:grid-cols-2 gap-10 py-14 px-24">
             <div>
                 <div class="header flex flex-row h-9 justify-between content-center">
                     <div class="flex flex-row">
@@ -44,12 +45,12 @@
                 </div>
             </div>
             <div class="block-1-right">
-                <img class="phone-img" src="src/assets/block-1/phone.png" />
-                <img class="tether-img" src="src/assets/block-1/tether.png" />
-                <img class="chainlink-img" src="src/assets/block-1/chainlink.png" />
-                <img class="iphone-14-pro-img" src="src/assets/block-1/iPhone-14-Pro.png" />
-                <img class="card-img" src="src/assets/block-1/card.png" />
-                <img class="bitcoin-img" src="src/assets/block-1/bitcoin.png" />
+                <img class="iphone-14-pro-img display-transation from-bottom" src="src/assets/block-1/iPhone-14-Pro.png" />
+                <img class="phone-img display-transation from-right" src="src/assets/block-1/phone.png" />
+                <img class="tether-img display-transation from-top" src="src/assets/block-1/tether.png" />
+                <img class="chainlink-img display-transation from-left" src="src/assets/block-1/chainlink.png" />
+                <img class="card-img display-transation from-right" src="src/assets/block-1/card.png" />
+                <img class="bitcoin-img display-transation from-bottom" src="src/assets/block-1/bitcoin.png" />
             </div>
         </div>
         <div class="block-2">
@@ -83,30 +84,36 @@
                 </div>
             </div>
         </div>
-        <div class="block-3">
+        <div id="block3" class="block-3">
             <div class="container pt-16 mx-auto px-24">
                 <h1 class="font-48 font-bold text-dark-blue">Manage Digital Assets Made Easy</h1>
                 <p class="font-22 font-medium text-grey-60">Galaxy Wallet offers users, particularly non-crypto
                     users, an intuitive, all-encompassing solution that goes beyond a standard wallet with basic
                     coins/NFTs storage and transfer features.</p>
                 <div class="grid grid-cols-3 gap-8 font-28 text-dark-blue mt-20 ">
-                    <div class="flex flex-col">
-                        <div class="process-bar"></div>
-                        <div class="font-bold mt-5">Store digital assets all in one wallet</div>
+                    <div class="flex flex-col slide">
+                        <div class="process-bar">
+                            <div class="complete-bar"></div>
+                        </div>
+                        <div class="mt-5 process-title">Store digital assets all in one wallet</div>
                         <div class="flex step-img mt-12">
                             <img src="src/assets/block-3/step-1.png" />
                         </div>
                     </div>
-                    <div class="flex flex-col">
-                        <div class="process-bar"></div>
-                        <div class="font-bold mt-5 px-2">Track all your wallets in one App</div>
+                    <div class="flex flex-col slide">
+                        <div class="process-bar">
+                            <div class="complete-bar"></div>
+                        </div>
+                        <div class="mt-5 px-2 process-title">Track all your wallets in one App</div>
                         <div class="flex step-img mt-12">
                             <img src="src/assets/block-3/step-2.png" />
                         </div>
                     </div>
-                    <div class="flex flex-col">
-                        <div class="process-bar"></div>
-                        <div class="font-bold mt-5">Exchange local currency into digital assets </div>
+                    <div class="flex flex-col slide">
+                        <div class="process-bar">
+                            <div class="complete-bar"></div>
+                        </div>
+                        <div class="mt-5 process-title">Exchange local currency into digital assets </div>
                         <div class="flex step-img mt-12">
                             <img src="src/assets/block-3/step-3.png" />
                         </div>
@@ -150,10 +157,10 @@
                             Digital Avatar
                         </h1>
                         <div class="grid grid-cols-4 max-w-340 mt-7">
-                            <div class="ava-img z-40"><img src="src/assets/block-5/avatar-1.png" /></div>
-                            <div class="ava-img z-30"><img src="src/assets/block-5/avatar-2.png" /></div>
-                            <div class="ava-img z-20"><img src="src/assets/block-5/avatar-3.png" /></div>
-                            <div class="ava-img z-10"><img src="src/assets/block-5/avatar-4.png" /></div>
+                            <div class="ava-img z-40 display-transation from-left"><img src="src/assets/block-5/avatar-1.png" /></div>
+                            <div class="ava-img z-30 display-transation from-left"><img src="src/assets/block-5/avatar-2.png" /></div>
+                            <div class="ava-img z-20 display-transation from-left"><img src="src/assets/block-5/avatar-3.png" /></div>
+                            <div class="ava-img z-10 display-transation from-left"><img src="src/assets/block-5/avatar-4.png" /></div>
                         </div>
                         <div class="mt-7">
                             You can mint your all digital identity right when you create an App
@@ -164,7 +171,7 @@
                             <span class="text-light-blue">Track and get alerts</span><br />
                             about any other wallets in watchlist
                         </h1>
-                        <div class="-mr-30 -mb-30 apple-watch col-span-5 z-0">
+                        <div class="-mr-30 -mb-30 apple-watch col-span-5 z-0 display-transation from-bottom-left">
                             <img src="src/assets/block-5/Apple-Watch.png" />
                         </div>
                     </div>
@@ -175,7 +182,7 @@
                             <span class="text-light-blue">Share instant #Finance101</span><br />
                             on Reels and Stories with friends
                         </h1>
-                        <div class="-mb-30 max-w-426">
+                        <div class="-mb-30 max-w-426 display-transation from-bottom">
                             <img src="src/assets/block-5/phone.png" />
                         </div>
                     </div>
@@ -187,7 +194,7 @@
                                     with other platforms
                                 </h1>
                             </div>
-                            <div class="platforms-group-img mt-2">
+                            <div class="platforms-group-img mt-2 display-transation from-right">
                                 <img class="-ml-16" src="src/assets/block-5/platforms-group.png">
                             </div>
                         </div>
@@ -197,7 +204,7 @@
         </div>
         <div class="block-6">
             <div class="container p-24 mx-auto">
-                <img class="z-10 iphone-pro" src="src/assets/block-6/iphone-14-pro.png" />
+                <img class="z-10 iphone-pro animation-flying" src="src/assets/block-6/iphone-14-pro.png" />
                 <div class="bl6-content z-0 flex flex-col round-30">
                     <div class="flex flex-row">
                         <img class="logo-img mr-2" src="src/assets/logo.png">
