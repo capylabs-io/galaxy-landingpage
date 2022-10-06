@@ -11,6 +11,11 @@ body {
   width: 102px;
   height: 32px;
 }
+.block-1 {
+  height: 100vh;
+  max-height: 1080px;
+  min-height: 714px;
+}
 .block-1-right {
   position: relative;
   background: linear-gradient(
@@ -23,9 +28,9 @@ body {
     ),
     #ffffff;
   border-radius: 30px;
-  height: 100vh;
-  max-height: 900px;
-  min-height: 714px;
+  height: calc(100vh - 80px);
+  max-height: calc(1080px - 80px);
+  min-height: calc(714px - 80px);
 }
 .block-1-right img {
   position: absolute;
@@ -63,8 +68,9 @@ body {
   right: -6rem;
 }
 .block-2 {
-  height: 100%;
-  max-height: 900px;
+  height: 100vh;
+  max-height: 1080px;
+  min-height: 714px;
   padding: 4rem;
   background: linear-gradient(
       70.11deg,
@@ -78,7 +84,14 @@ body {
 }
 .block-3 {
   position: relative;
-  height: 100%;
+  height: 100vh;
+  max-height: 1080px;
+  min-height: 920px;
+}
+.bl3-content {
+  height: calc(100vh - 4rem);
+  max-height: calc(1080px - 4rem);
+  min-height: calc(920px - 4rem);
 }
 .block-3::after {
   content: "";
@@ -139,6 +152,9 @@ body {
 .block-4 {
   background-image: url("../assets/block-4/background.png");
   width: 100vw;
+  height: 100vh;
+  max-height: 1080px;
+  min-height: 714px;
   background-size: cover;
   background-repeat: no-repeat;
   margin: auto;
@@ -240,6 +256,14 @@ body {
   background-image: url("../assets/block-4/background.png");
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100vh;
+  max-height: 1080px;
+  min-height: 714px;
+}
+.bl7-content {
+  height: calc(100vh - 10rem);
+  max-height: calc(1080px - 10rem);
+  min-height: calc(714px - 10rem);
 }
 .item-content {
   background: linear-gradient(

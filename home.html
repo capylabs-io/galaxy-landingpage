@@ -16,8 +16,8 @@
 
 <body>
     <div class="w-full">
-        <div id="block-1" class="container mx-auto block-1 grid lg:grid-cols-2 gap-10 py-14 px-24">
-            <div>
+        <div id="block-1" class="container mx-auto block-1 grid lg:grid-cols-2 gap-10 py-10 px-24">
+            <div class="py-4 flex flex-col justify-between content-center">
                 <div class="header flex flex-row h-9 justify-between content-center">
                     <div class="flex flex-row">
                         <img class="logo-img mr-1" src="src/assets/logo.png">
@@ -27,13 +27,13 @@
                         <img class="mt-1.5" src="src/assets/menu-icon.png" />
                     </div>
                 </div>
-                <div class="py-32 flex flex-col justify-center text-dark-blue">
+                <div class="flex flex-col justify-center text-dark-blue">
                     <h1 class="font-68 w-auto font-bold">
                         The Only<br />
                         Social Wallet<br />
                         for Web 3.0
                     </h1>
-                    <p class="font-22 mt-8">
+                    <p class="font-22">
                         An easy, one-touch, simplified human<br />
                         language App which allows everyone to<br />
                         store - create – invest digital assets
@@ -45,12 +45,12 @@
                 </div>
             </div>
             <div class="block-1-right">
-                <img class="iphone-14-pro-img display-transation from-bottom" src="src/assets/block-1/iPhone-14-Pro.png" />
-                <img class="phone-img display-transation from-right" src="src/assets/block-1/phone.png" />
-                <img class="tether-img display-transation from-top" src="src/assets/block-1/tether.png" />
-                <img class="chainlink-img display-transation from-left" src="src/assets/block-1/chainlink.png" />
-                <img class="card-img display-transation from-right" src="src/assets/block-1/card.png" />
-                <img class="bitcoin-img display-transation from-bottom" src="src/assets/block-1/bitcoin.png" />
+                <img class="bl1-img iphone-14-pro-img display-transation from-bottom" src="src/assets/block-1/iPhone-14-Pro.png" />
+                <img class="bl1-img phone-img display-transation from-right" src="src/assets/block-1/phone.png" />
+                <img class="bl1-img tether-img display-transation from-top" src="src/assets/block-1/tether.png" />
+                <img class="bl1-img chainlink-img display-transation from-left" src="src/assets/block-1/chainlink.png" />
+                <img class="bl1-img card-img display-transation from-right" src="src/assets/block-1/card.png" />
+                <img class="bl1-img bitcoin-img display-transation from-bottom" src="src/assets/block-1/bitcoin.png" />
             </div>
         </div>
         <div class="block-2">
@@ -86,36 +86,38 @@
         </div>
         <div id="block3" class="block-3">
             <div class="container pt-16 mx-auto px-24">
-                <h1 class="font-48 font-bold text-dark-blue">Manage Digital Assets Made Easy</h1>
-                <p class="font-22 font-medium text-grey-60">Galaxy Wallet offers users, particularly non-crypto
-                    users, an intuitive, all-encompassing solution that goes beyond a standard wallet with basic
-                    coins/NFTs storage and transfer features.</p>
-                <div class="grid grid-cols-3 gap-8 font-28 text-dark-blue mt-20">
-                    <div class="flex flex-col slide" onclick="onClickLoadBlock3(0)">
-                        <div class="process-bar">
-                            <div class="complete-bar"></div>
+                <div class="bl3-content flex flex-col justify-between">
+                    <h1 class="font-48 font-bold text-dark-blue">Manage Digital Assets Made Easy</h1>
+                    <p class="font-22 font-medium text-grey-60">Galaxy Wallet offers users, particularly non-crypto
+                        users, an intuitive, all-encompassing solution that goes beyond a standard wallet with basic
+                        coins/NFTs storage and transfer features.</p>
+                    <div class="grid grid-cols-3 gap-8 font-28 text-dark-blue">
+                        <div class="flex flex-col slide" onclick="onClickLoadBlock3(0)">
+                            <div class="process-bar">
+                                <div class="complete-bar"></div>
+                            </div>
+                            <div class="mt-5 process-title">Store digital assets all in one wallet</div>
+                            <div class="flex step-img mt-12">
+                                <img src="src/assets/block-3/step-1.png" />
+                            </div>
                         </div>
-                        <div class="mt-5 process-title">Store digital assets all in one wallet</div>
-                        <div class="flex step-img mt-12">
-                            <img src="src/assets/block-3/step-1.png" />
+                        <div class="flex flex-col slide" onclick="onClickLoadBlock3(1)">
+                            <div class="process-bar">
+                                <div class="complete-bar"></div>
+                            </div>
+                            <div class="mt-5 px-2 process-title">Track all your wallets in one App</div>
+                            <div class="flex step-img mt-12">
+                                <img src="src/assets/block-3/step-2.png" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex flex-col slide" onclick="onClickLoadBlock3(1)">
-                        <div class="process-bar">
-                            <div class="complete-bar"></div>
-                        </div>
-                        <div class="mt-5 px-2 process-title">Track all your wallets in one App</div>
-                        <div class="flex step-img mt-12">
-                            <img src="src/assets/block-3/step-2.png" />
-                        </div>
-                    </div>
-                    <div class="flex flex-col slide" onclick="onClickLoadBlock3(2)">
-                        <div class="process-bar">
-                            <div class="complete-bar"></div>
-                        </div>
-                        <div class="mt-5 process-title">Exchange local currency into digital assets </div>
-                        <div class="flex step-img mt-12">
-                            <img src="src/assets/block-3/step-3.png" />
+                        <div class="flex flex-col slide" onclick="onClickLoadBlock3(2)">
+                            <div class="process-bar">
+                                <div class="complete-bar"></div>
+                            </div>
+                            <div class="mt-5 process-title">Exchange local currency into digital assets </div>
+                            <div class="flex step-img mt-12">
+                                <img src="src/assets/block-3/step-3.png" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -221,23 +223,25 @@
             </div>
         </div>
         <div class="block-7">
-            <div class="container p-24 m-auto">
-                <h1 class="font-48 font-normal text-center">
-                    <span class="text-light-blue">Coming next</span><br />
-                    An one-stop-shop for Defi
-                </h1>
-                <div class="grid grid-cols-3 gap-6 pt-32">
-                    <div class="item-content round-30 display-transation from-bottom">
-                        <img class="py-2 px-16" src="src/assets/block-7/rocket.png"/>
-                        <div class="bg-dark-blue round-30 font-28 font-bold text-white py-14 px-16 text-center">Crowd Funding Platform</div>
-                    </div>
-                    <div class="item-content round-30 display-transation from-bottom">
-                        <img class="py-2 px-16" src="src/assets/block-7/locker.png"/>
-                        <div class="bg-dark-blue round-30 font-28 font-bold text-white py-14 px-16 text-center">Crowd Funding Platform</div>
-                    </div>
-                    <div class="item-content round-30 display-transation from-bottom">
-                        <img class="py-2 px-16" src="src/assets/block-7/bag.png"/>
-                        <div class="bg-dark-blue round-30 font-28 font-bold text-white py-14 px-16 text-center">Crowd Funding Platform</div>
+            <div class="container px-24 py-16 m-auto">
+                <div class="bl7-content flex flex-col justify-between content-between">
+                    <h1 class="font-48 h-32 font-normal text-center">
+                        <span class="text-light-blue">Coming next</span><br />
+                        An one-stop-shop for Defi
+                    </h1>
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="item-content round-30 display-transation from-bottom">
+                            <img class="py-2 px-16" src="src/assets/block-7/rocket.png"/>
+                            <div class="bg-dark-blue round-30 font-28 font-bold text-white py-14 px-16 text-center">Crowd Funding Platform</div>
+                        </div>
+                        <div class="item-content round-30 display-transation from-bottom">
+                            <img class="py-2 px-16" src="src/assets/block-7/locker.png"/>
+                            <div class="bg-dark-blue round-30 font-28 font-bold text-white py-14 px-16 text-center">Crowd Funding Platform</div>
+                        </div>
+                        <div class="item-content round-30 display-transation from-bottom">
+                            <img class="py-2 px-16" src="src/assets/block-7/bag.png"/>
+                            <div class="bg-dark-blue round-30 font-28 font-bold text-white py-14 px-16 text-center">Crowd Funding Platform</div>
+                        </div>
                     </div>
                 </div>
             </div>

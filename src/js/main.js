@@ -1,5 +1,6 @@
 const tranactionItems = document.getElementsByClassName('display-transation')
-const block3Id = document.getElementsByClassName('block-3')
+const block2Item = document.getElementsByClassName('block-2')
+const block3Item = document.getElementsByClassName('block-3')
 var timer
 
 window.addEventListener('scroll', callDisplayTransaction)
@@ -16,7 +17,18 @@ function callDisplayTransaction() {
         }
     })
 
-    Array.from(block3Id).forEach(item => {
+    // Block 2 transition
+    Array.from(block2Item).forEach(item => {
+        if (item.getBoundingClientRect().top < triggerBottom-300) {
+            let block1Class =  Array.from(document.getElementsByClassName('bl1-img'))
+            block1Class.forEach(item => {
+                item.classList.remove('show')
+            })
+        }
+    })
+
+    // Block 3 transition
+    Array.from(block3Item).forEach(item => {
         if (!item.classList.contains('process-active')){
             if (item.getBoundingClientRect().top < triggerBottom) {
                 item.classList.add('process-active')
