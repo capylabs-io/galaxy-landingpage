@@ -241,6 +241,9 @@ body {
   left: 6rem;
   max-height: 37.5rem;
 }
+.block-6 .container .iphone-pro img{
+  max-height: 37.5rem;
+}
 .bl6-content {
   background-image: url("../assets/block-4/background.png");
   background-size: cover;
