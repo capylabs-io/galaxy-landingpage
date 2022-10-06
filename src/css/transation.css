@@ -56,12 +56,11 @@
 .ava-img:nth-child(5) {
   animation-delay: 2.2s;
 }
-
 .complete-bar {
-  width: 0%;
   height: 5px;
   background-color: #0076ff;
   transition: transform;
+  animation: processing-reverse 0.2s forwards;
 }
 .active .complete-bar {
   animation-name: processing;
@@ -70,11 +69,32 @@
   animation-timing-function: ease;
 }
 .active .process-title {
-    font-weight: 700;
-    color: #0076ff;
+  font-weight: 700;
+  color: #0076ff;
+}
+.step-img {
+  animation: tran-opacity-reverse 1s forwards;
 }
 .active .step-img {
+  animation: tran-opacity 0.4s forwards;
+}
+
+@keyframes tran-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
+  }
+}
+
+@keyframes tran-opacity-reverse {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes processing {
@@ -83,6 +103,15 @@
   }
   100% {
     width: 100%;
+  }
+}
+
+@keyframes processing-reverse {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
   }
 }
 

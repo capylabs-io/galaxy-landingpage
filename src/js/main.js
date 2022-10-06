@@ -1,5 +1,6 @@
 const tranactionItems = document.getElementsByClassName('display-transation')
 const block3Id = document.getElementsByClassName('block-3')
+var block3ClickEvent = false
 
 window.addEventListener('scroll', callDisplayTransaction)
 
@@ -16,23 +17,37 @@ function callDisplayTransaction() {
     })
 
     Array.from(block3Id).forEach(item => {
-        if (item.getBoundingClientRect().top < triggerBottom) {
-            loadingBloack3()
+        if (!item.classList.contains('process-active')){
+            if (item.getBoundingClientRect().top < triggerBottom) {
+                item.classList.add('process-active')
+                loadingBlock3(0, true)
+            }
         }
     })
+    
 }
-async function loadingBloack3() {
-    const processBar = Array.from(document.getElementsByClassName('slide'))
-    while (processBar) {
-        processBar[2].classList.remove('active')
-        processBar[0].classList.add('active')
+async function loadingBlock3(index, onclickEvent) {
+    if (!block3ClickEvent) {
+        if (onclickEvent) {
+            block3ClickEvent = true
+        }
+        const processBar = Array.from(document.getElementsByClassName('slide'))
+        let activeElement = Array.from(document.getElementsByClassName('slide active'))
+        if (index >= processBar.length) {
+            index = 0
+        }
+        // active class remove
+        activeElement.forEach(item => {
+            item.classList.remove('active')
+        })
+        // add active class 
+        processBar[index].classList.add('active')
+
         await delay(5000)
-        processBar[0].classList.remove('active')
-        processBar[1].classList.add('active')
-        await delay(5000)
-        processBar[1].classList.remove('active')
-        processBar[2].classList.add('active')
-        await delay(5000)
+        if (onclickEvent) {
+            block3ClickEvent = false
+        }
+        loadingBlock3(index+1, false)
     }
 }
 async function callDelay(ms) {
