@@ -97,6 +97,9 @@ body {
   );
   filter: blur(100px);
 }
+.slide {
+  cursor: pointer;
+}
 .process-bar {
   width: 100%;
   height: 5px;
