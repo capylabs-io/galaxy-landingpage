@@ -14,7 +14,7 @@ body {
 .block-1 {
   height: 100vh;
   max-height: 1080px;
-  min-height: 714px;
+  min-height: 734px;
 }
 .block-1-right {
   position: relative;
@@ -30,7 +30,7 @@ body {
   border-radius: 30px;
   height: calc(100vh - 80px);
   max-height: calc(1080px - 80px);
-  min-height: calc(714px - 80px);
+  min-height: calc(734px - 80px);
 }
 .block-1-right img {
   position: absolute;
@@ -70,7 +70,7 @@ body {
 .block-2 {
   height: 100vh;
   max-height: 1080px;
-  min-height: 714px;
+  min-height: 734px;
   padding: 4rem;
   background: linear-gradient(
       70.11deg,
@@ -154,7 +154,7 @@ body {
   width: 100vw;
   height: 100vh;
   max-height: 1080px;
-  min-height: 714px;
+  min-height: 734px;
   background-size: cover;
   background-repeat: no-repeat;
   margin: auto;
@@ -258,12 +258,12 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
   max-height: 1080px;
-  min-height: 714px;
+  min-height: 734px;
 }
 .bl7-content {
   height: calc(100vh - 10rem);
   max-height: calc(1080px - 10rem);
-  min-height: calc(714px - 10rem);
+  min-height: calc(734px - 10rem);
 }
 .item-content {
   background: linear-gradient(
