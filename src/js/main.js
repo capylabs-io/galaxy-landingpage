@@ -1,19 +1,29 @@
 const tranactionItems = document.getElementsByClassName('display-transation')
+const block1Item = document.getElementsByClassName('block-1')
 const block2Item = document.getElementsByClassName('block-2')
 const block3Item = document.getElementsByClassName('block-3')
 const trgger1Class = document.getElementsByClassName('trigger-1')
 const trgger2Class = document.getElementsByClassName('trigger-2')
 const trgger3Class = document.getElementsByClassName('trigger-3')
 const showingTrigger = document.getElementsByClassName('trigger show')
+const fullPageObject = document.getElementsByClassName('fullpage')
+const triggerBottom = window.innerHeight / 5 * 4;
 var timer
 var countTrigger = 0
 
-
-window.addEventListener('scroll', callDisplayTransaction)
-
+window.onload = (event) => {
+    const fullPageObjectArr = Array.from(fullPageObject)
+    callDisplayTransaction()
+    handleInBlock1(fullPageObjectArr)
+    handleInBlock2(fullPageObjectArr)
+    handleInBlock3(fullPageObjectArr)
+    handleInBlock4(fullPageObjectArr)
+    handleInBlock5(fullPageObjectArr)
+};
+window.addEventListener('scroll', function(event) {
+    callDisplayTransaction()
+})
 function callDisplayTransaction() {
-    const triggerBottom = window.innerHeight / 5 * 4;
-    
     Array.from(tranactionItems).forEach(item => {
         let itemTop = item.getBoundingClientRect().top
         if (itemTop < triggerBottom) {
@@ -22,90 +32,6 @@ function callDisplayTransaction() {
             item.classList.remove('show')
         }
     })
-
-    // Block 2 transition
-    Array.from(block2Item).forEach(item => {
-        let bl2Top = item.getBoundingClientRect().top
-        // let bl2Bottom = item.getBoundingClientRect().bottom
-        // item.addEventListener('wheel', preventScroll, {passive: false});
-        // console.log(bl2Bottom)
-        //     if (bl2Top+window.innerHeight > 840 && bl2Top+window.innerHeight < 1350) {
-        //         let block1Class =  Array.from(document.getElementsByClassName('bl1-img'))
-        //             block1Class.forEach(item => {
-        //                 item.classList.remove('show')
-        //         })
-        //         item.addEventListener('wheel', function(event) {
-        //             if (event.deltaY < 0)
-        //             {
-        //                     // block 2 show
-        //                 countTrigger--
-        //             }
-        //             else if (event.deltaY > 0)
-        //             {
-        //                 // block 2 show
-        //                 countTrigger++
-        //             }
-        //             console.log("countTrigger++ " + countTrigger)
-        //                 Array.from(showingTrigger).forEach(trigger => {
-        //                     trigger.classList.remove('show')
-        //                 })
-        //                 if (countTrigger < 40) {
-        //                     Array.from(trgger1Class).forEach(trigger => {
-        //                         trigger.classList.add('show')
-        //                     })
-        //                 } else if (countTrigger < 80) {
-        //                     Array.from(trgger2Class).forEach(trigger => {
-        //                         trigger.classList.add('show')
-        //                     })
-        //                 } else if (countTrigger < 120) {
-        //                     Array.from(trgger3Class).forEach(trigger => {
-        //                         trigger.classList.add('show')
-        //                     })
-        //                 } else if (countTrigger < 0){
-        //                     countTrigger = 0
-        //                 } else if (countTrigger > 120) {
-        //                     countTrigger = 120
-        //                 }
-        //         })
-                
-        // }
-        console.log(bl2Top+window.innerHeight)
-        if (bl2Top+window.innerHeight > 1100 && bl2Top+window.innerHeight < 1350) {
-            Array.from(showingTrigger).forEach(trigger => {
-                trigger.classList.remove('show')
-            })
-            Array.from(trgger1Class).forEach(trigger => {
-                trigger.classList.add('show')
-            })
-        } else if (bl2Top+window.innerHeight > 950 && bl2Top+window.innerHeight < 1100) {
-            Array.from(showingTrigger).forEach(trigger => {
-                trigger.classList.remove('show')
-            })
-            Array.from(trgger2Class).forEach(trigger => {
-                trigger.classList.add('show')
-            })
-        } else if (bl2Top+window.innerHeight > 750 && bl2Top+window.innerHeight < 950) {
-            Array.from(showingTrigger).forEach(trigger => {
-                trigger.classList.remove('show')
-            })
-            Array.from(trgger3Class).forEach(trigger => {
-                trigger.classList.add('show')
-            })
-        }
-    })
-
-    // Block 3 transition
-    Array.from(block3Item).forEach(item => {
-        if (!item.classList.contains('process-active')){
-            if (item.getBoundingClientRect().top < triggerBottom) {
-                item.classList.add('process-active')
-                loadingBlock3(0)
-            }
-        }
-        if (item.getBoundingClientRect().top < triggerBottom) {
-        }
-    })
-    
 }
 function onClickLoadBlock3(index) {
     clearTimeout(timer)
@@ -127,13 +53,105 @@ async function loadingBlock3(index) {
     timer = setTimeout(function() { loadingBlock3(index+1, false)}, 5000);
 }
 
-window.onload = (event) => {
-    callDisplayTransaction()
-};
+// fullpage
+
+function handleInBlock1(fullPage) {
+    fullPage[0].addEventListener('wheel', function(event) {
+        if (event.deltaY > 0) {
+            console.log(fullPage[0].getBoundingClientRect().top)
+            countTrigger = 0
+            fullPage[1].scrollIntoView()
+       }
+    })
+}
+
+function handleInBlock2(fullPage) {
+    fullPage[1].addEventListener('wheel', function(e) {
+        preventScroll(e)
+        if (e.deltaY > 0) {
+            countTrigger++
+        } else if (e.deltaY < 0) {
+            countTrigger--
+        }
+        if (countTrigger < 0) {
+            detroyEvent = true
+            fullPage[0].scrollIntoView()
+            callDisplayTransaction()
+        } else if (countTrigger <= 3) {
+            Array.from(showingTrigger).forEach(trigger => {
+                trigger.classList.remove('show')
+            })
+            Array.from(trgger1Class).forEach(trigger => {
+                trigger.classList.add('show')
+            })
+        } else if (countTrigger <= 6) {
+            Array.from(showingTrigger).forEach(trigger => {
+                trigger.classList.remove('show')
+            })
+            Array.from(trgger2Class).forEach(trigger => {
+                trigger.classList.add('show')
+            })
+        } else if (countTrigger <= 9) {
+            Array.from(showingTrigger).forEach(trigger => {
+                trigger.classList.remove('show')
+            })
+            Array.from(trgger3Class).forEach(trigger => {
+                trigger.classList.add('show')
+            })
+        } else if (countTrigger > 12) {
+            countTrigger = undefined
+            var triggerBottom = window.innerHeight / 5 * 4;
+            fullPage[2].scrollIntoView()
+            Array.from(block3Item).forEach(item => {
+                if (!item.classList.contains('process-active')){
+                    if (item.getBoundingClientRect().top < triggerBottom) {
+                        item.classList.add('process-active')
+                        loadingBlock3(0)
+                    }
+                }
+                if (item.getBoundingClientRect().top < triggerBottom) {
+                }
+            })
+        }
+    })
+
+}
+
+function handleInBlock3(fullPage) {
+    fullPage[2].addEventListener('wheel', function(event) {
+        if (event.deltaY < 0){
+            countTrigger = 12
+            fullPage[1].scrollIntoView()
+       } else if (event.deltaY > 0) {
+            fullPage[3].scrollIntoView()
+       }
+    })
+}
+
+function handleInBlock4(fullPage) {
+    fullPage[3].addEventListener('wheel', function(event) {
+        if (event.deltaY < 0){
+            fullPage[2].scrollIntoView()
+       } else if (event.deltaY > 0) {
+            fullPage[4].scrollIntoView()
+            callDisplayTransaction()
+       }
+    })
+}
+
+function handleInBlock5(fullPage) {
+    fullPage[4].addEventListener('wheel', function(event) {
+        console.log("page 4 " + fullPage[3].getBoundingClientRect().bottom)
+        if (event.deltaY < 0){
+            if (fullPage[3].getBoundingClientRect().bottom >= 0) {
+                fullPage[3].scrollIntoView()
+            }
+       }
+    })
+}
 
 function preventScroll(e){
     e.preventDefault();
     e.stopPropagation();
-
     return false;
 }

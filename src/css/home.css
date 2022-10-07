@@ -83,6 +83,9 @@ body {
     ),
     #ffffff;
 }
+.countTrigger {
+  display: none;
+}
 .block-3 {
   position: relative;
   height: 100vh;
@@ -282,4 +285,7 @@ body {
 .icon {
   width: 43px;
   height: 43px;
+}
+.fullpage .top {
+  display: none;
 }
