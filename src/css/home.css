@@ -68,6 +68,7 @@ body {
   right: -6rem;
 }
 .block-2 {
+  overflow:hidden;
   height: 100vh;
   max-height: 1080px;
   min-height: 734px;
