@@ -146,7 +146,7 @@ function handleInBlock5(fullPage) {
     fullPage[4].addEventListener('wheel', function(event) {
         console.log("page 4 " + fullPage[3].getBoundingClientRect().bottom)
         if (event.deltaY < 0){
-            if (fullPage[4].getBoundingClientRect().top <= 10) {
+            if (fullPage[4].getBoundingClientRect().top <= 20) {
                 fullPage[3].scrollIntoView()
             }
        }
