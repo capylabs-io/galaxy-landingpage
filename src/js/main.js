@@ -57,6 +57,7 @@ async function loadingBlock3(index) {
 
 function handleInBlock1(fullPage) {
     fullPage[0].addEventListener('wheel', function(event) {
+        preventScroll(event)
         if (event.deltaY > 0) {
             console.log(fullPage[0].getBoundingClientRect().top)
             countTrigger = 0
@@ -119,6 +120,7 @@ function handleInBlock2(fullPage) {
 
 function handleInBlock3(fullPage) {
     fullPage[2].addEventListener('wheel', function(event) {
+        preventScroll(event)
         if (event.deltaY < 0){
             countTrigger = 12
             fullPage[1].scrollIntoView()
@@ -130,6 +132,7 @@ function handleInBlock3(fullPage) {
 
 function handleInBlock4(fullPage) {
     fullPage[3].addEventListener('wheel', function(event) {
+        preventScroll(event)
         if (event.deltaY < 0){
             fullPage[2].scrollIntoView()
        } else if (event.deltaY > 0) {
@@ -143,7 +146,7 @@ function handleInBlock5(fullPage) {
     fullPage[4].addEventListener('wheel', function(event) {
         console.log("page 4 " + fullPage[3].getBoundingClientRect().bottom)
         if (event.deltaY < 0){
-            if (fullPage[3].getBoundingClientRect().bottom >= 0) {
+            if (fullPage[4].getBoundingClientRect().top <= 10) {
                 fullPage[3].scrollIntoView()
             }
        }
