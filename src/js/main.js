@@ -74,7 +74,7 @@ function handleInBlock2(fullPage) {
             countTrigger--
         }
         if (countTrigger < 0) {
-            detroyEvent = true
+            countTrigger = undefined
             fullPage[0].scrollIntoView()
             callDisplayTransaction()
         } else if (countTrigger <= 3) {
