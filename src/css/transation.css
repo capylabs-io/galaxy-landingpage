@@ -132,3 +132,28 @@
     transform: translate(0, 0px);
   }
 }
+
+/* block 2 */
+.text-trigger h1 {
+  color: #0a083a33;
+}
+.text-trigger.show h1 {
+  color: #0076ff;
+}
+.text-trigger p {
+  opacity: 0;
+}
+.text-trigger.show p {
+  opacity: 1;
+}
+.trigger-img {
+  display: none;
+  opacity: 0;
+  transform: translateY(-50%);
+}
+.show.trigger-img {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.4s ease;
+}
