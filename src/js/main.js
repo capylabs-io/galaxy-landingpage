@@ -148,7 +148,8 @@ function handleInBlock5(fullPage) {
     fullPage[4].addEventListener('wheel', function(event) {
         if (event.deltaY < 0){
             if (fullPage[4].getBoundingClientRect().top <= 20) {
-                fullPage[3].scrollIntoView({ behavior: 'smooth'})
+                fullPage[3].scrollIntoView()
+                console.log("ok")
             }
        }
     })
