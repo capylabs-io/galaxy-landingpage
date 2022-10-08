@@ -59,9 +59,8 @@ function handleInBlock1(fullPage) {
     fullPage[0].addEventListener('wheel', function(event) {
         preventScroll(event)
         if (event.deltaY > 0) {
-            console.log(fullPage[0].getBoundingClientRect().top)
             countTrigger = 0
-            fullPage[1].scrollIntoView()
+            fullPage[1].scrollIntoView({ behavior: 'smooth'})
        }
     })
 }
@@ -69,6 +68,11 @@ function handleInBlock1(fullPage) {
 function handleInBlock2(fullPage) {
     fullPage[1].addEventListener('wheel', function(e) {
         preventScroll(e)
+        // block 1 - image hidden
+        let block1Img =  Array.from(document.getElementsByClassName('bl1-img'))
+            block1Img.forEach(item => {
+            item.classList.remove('show')
+        })
         if (e.deltaY > 0) {
             countTrigger++
         } else if (e.deltaY < 0) {
@@ -76,7 +80,7 @@ function handleInBlock2(fullPage) {
         }
         if (countTrigger < 0) {
             countTrigger = undefined
-            fullPage[0].scrollIntoView()
+            fullPage[0].scrollIntoView({ behavior: 'smooth'})
             callDisplayTransaction()
         } else if (countTrigger <= 3) {
             Array.from(showingTrigger).forEach(trigger => {
@@ -104,13 +108,11 @@ function handleInBlock2(fullPage) {
             var triggerBottom = window.innerHeight / 5 * 4;
             fullPage[2].scrollIntoView()
             Array.from(block3Item).forEach(item => {
-                if (!item.classList.contains('process-active')){
+                if (!item.classList.contains('process-active')) {
                     if (item.getBoundingClientRect().top < triggerBottom) {
                         item.classList.add('process-active')
                         loadingBlock3(0)
                     }
-                }
-                if (item.getBoundingClientRect().top < triggerBottom) {
                 }
             })
         }
@@ -121,11 +123,11 @@ function handleInBlock2(fullPage) {
 function handleInBlock3(fullPage) {
     fullPage[2].addEventListener('wheel', function(event) {
         preventScroll(event)
-        if (event.deltaY < 0){
+        if (event.deltaY < 0) {
             countTrigger = 12
-            fullPage[1].scrollIntoView()
+            fullPage[1].scrollIntoView({ behavior: 'smooth'})
        } else if (event.deltaY > 0) {
-            fullPage[3].scrollIntoView()
+            fullPage[3].scrollIntoView({ behavior: 'smooth'})
        }
     })
 }
@@ -133,10 +135,10 @@ function handleInBlock3(fullPage) {
 function handleInBlock4(fullPage) {
     fullPage[3].addEventListener('wheel', function(event) {
         preventScroll(event)
-        if (event.deltaY < 0){
-            fullPage[2].scrollIntoView()
+        if (event.deltaY < 0) {
+            fullPage[2].scrollIntoView({ behavior: 'smooth'})
        } else if (event.deltaY > 0) {
-            fullPage[4].scrollIntoView()
+            fullPage[4].scrollIntoView({ behavior: 'smooth'})
             callDisplayTransaction()
        }
     })
@@ -144,10 +146,9 @@ function handleInBlock4(fullPage) {
 
 function handleInBlock5(fullPage) {
     fullPage[4].addEventListener('wheel', function(event) {
-        console.log("page 4 " + fullPage[3].getBoundingClientRect().bottom)
         if (event.deltaY < 0){
             if (fullPage[4].getBoundingClientRect().top <= 20) {
-                fullPage[3].scrollIntoView()
+                fullPage[3].scrollIntoView({ behavior: 'smooth'})
             }
        }
     })
