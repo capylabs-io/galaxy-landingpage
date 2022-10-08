@@ -88,8 +88,11 @@ body::-webkit-scrollbar {
     ),
     #ffffff;
 }
-.countTrigger {
-  display: none;
+.block-2-right {
+  position: relative;
+}
+.trigger-img {
+  position: absolute;
 }
 .block-3 {
   position: relative;
