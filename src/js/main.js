@@ -134,7 +134,7 @@ function handleInBlock2(fullPage) {
 function handleInBlock3(fullPage) {
   fullPage[2].addEventListener("wheel", function (event) {
     if (event.deltaY < 0) {
-        if (fullPage[2].getBoundingClientRect().top <= 20) {
+        if (fullPage[2].getBoundingClientRect().top < 0) {
             fullPage[1].scrollIntoView();
             countTrigger = 2;
             preventScroll(event)
