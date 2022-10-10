@@ -138,7 +138,7 @@ function handleInBlock3(fullPage) {
           countTrigger = 2;
         }
       }
-      preventScroll(event)
+    //   preventScroll(event)
   });
 }
 
