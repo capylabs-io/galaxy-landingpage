@@ -95,10 +95,14 @@ body::-webkit-scrollbar {
 }
 .block-2-right {
   position: relative;
+  height: 100%;
 }
-.trigger-img-block {
-  position: relative;
+.trigger-2-img-block {
+  position: absolute;
   max-height: 582px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
 }
 .trigger-img {
   position: absolute;
@@ -130,6 +134,94 @@ body::-webkit-scrollbar {
   top: 230px;
   width: 252px;
   height: 102px;
+}
+.trigger-1-img-block {
+  position: absolute;
+  width: 568px;
+  height: 527px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+/* digital-avatar */
+.digital-01 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: 136px;
+  top: 115px;
+  z-index: 30;
+}
+.digital-02 {
+  position: absolute;
+  width: 118px;
+  height: 118px;
+  top: 0px;
+  left: 200px;
+  z-index: 50;
+}
+.digital-03 {
+  position: absolute;
+  width: 120px;
+  height: 153px;
+  top: 148px;
+  right: 45px;
+  z-index: 50;
+}
+.digital-04 {
+  position: absolute;
+  width: 120px;
+  height: 268px;
+  top: -40px;
+  left: 275px;
+}
+.digital-05 {
+  position: absolute;
+  width: 120px;
+  height: 153px;
+  left: 85px;
+  top: 45px;
+  z-index: 40;
+}
+.digital-06 {
+  position: absolute;
+  width: 162px;
+  height: 162px;
+  left: 10px;
+  bottom: 160px;
+  z-index: 50;
+}
+.digital-07 {
+  position: absolute;
+  width: 297px;
+  height: 82px;
+  bottom: 0px;
+  left: 136px;
+  z-index: 50;
+}
+.digital-08 {
+  position: absolute;
+  width: 162px;
+  height: 162px;
+  right: 0;
+  bottom: 60px;
+  z-index: 50;
+}
+.digital-09 {
+  position: absolute;
+  width: 98px;
+  height: 177px;
+  left: 93px;
+  top: 130px;
+  z-index: 20;
+}
+.digital-10 {
+  position: absolute;
+  width: 98px;
+  height: 177px;
+  bottom: 100px;
+  right: 55px;
+  z-index: 40;
 }
 .block-3 {
   position: relative;
