@@ -1,19 +1,30 @@
 const tranactionItems = document.getElementsByClassName('display-transation')
+const block1Item = document.getElementsByClassName('block-1')
 const block2Item = document.getElementsByClassName('block-2')
 const block3Item = document.getElementsByClassName('block-3')
 const trgger1Class = document.getElementsByClassName('trigger-1')
 const trgger2Class = document.getElementsByClassName('trigger-2')
 const trgger3Class = document.getElementsByClassName('trigger-3')
 const showingTrigger = document.getElementsByClassName('trigger show')
+const fullPageObject = document.getElementsByClassName('fullpage')
+const triggerBottom = window.innerHeight / 5 * 4;
 var timer
 var countTrigger = 0
 
-
-window.addEventListener('scroll', callDisplayTransaction)
-
-function callDisplayTransaction() {
-    const triggerBottom = window.innerHeight / 5 * 4;
-    
+window.onload = (event) => {
+    const fullPageObjectArr = Array.from(fullPageObject)
+    callDisplayTransaction(fullPageObjectArr)
+    handleInBlock1(fullPageObjectArr)
+    handleInBlock2(fullPageObjectArr)
+    handleInBlock3(fullPageObjectArr)
+    handleInBlock4(fullPageObjectArr)
+    handleInBlock5(fullPageObjectArr)
+};
+window.addEventListener('scroll', function(event) {
+    callDisplayTransaction()
+})
+function callDisplayTransaction(fullPage) {
+    fullPage[0].classList.add('display')
     Array.from(tranactionItems).forEach(item => {
         let itemTop = item.getBoundingClientRect().top
         if (itemTop < triggerBottom) {
@@ -22,90 +33,6 @@ function callDisplayTransaction() {
             item.classList.remove('show')
         }
     })
-
-    // Block 2 transition
-    Array.from(block2Item).forEach(item => {
-        let bl2Top = item.getBoundingClientRect().top
-        // let bl2Bottom = item.getBoundingClientRect().bottom
-        // item.addEventListener('wheel', preventScroll, {passive: false});
-        // console.log(bl2Bottom)
-        //     if (bl2Top+window.innerHeight > 840 && bl2Top+window.innerHeight < 1350) {
-        //         let block1Class =  Array.from(document.getElementsByClassName('bl1-img'))
-        //             block1Class.forEach(item => {
-        //                 item.classList.remove('show')
-        //         })
-        //         item.addEventListener('wheel', function(event) {
-        //             if (event.deltaY < 0)
-        //             {
-        //                     // block 2 show
-        //                 countTrigger--
-        //             }
-        //             else if (event.deltaY > 0)
-        //             {
-        //                 // block 2 show
-        //                 countTrigger++
-        //             }
-        //             console.log("countTrigger++ " + countTrigger)
-        //                 Array.from(showingTrigger).forEach(trigger => {
-        //                     trigger.classList.remove('show')
-        //                 })
-        //                 if (countTrigger < 40) {
-        //                     Array.from(trgger1Class).forEach(trigger => {
-        //                         trigger.classList.add('show')
-        //                     })
-        //                 } else if (countTrigger < 80) {
-        //                     Array.from(trgger2Class).forEach(trigger => {
-        //                         trigger.classList.add('show')
-        //                     })
-        //                 } else if (countTrigger < 120) {
-        //                     Array.from(trgger3Class).forEach(trigger => {
-        //                         trigger.classList.add('show')
-        //                     })
-        //                 } else if (countTrigger < 0){
-        //                     countTrigger = 0
-        //                 } else if (countTrigger > 120) {
-        //                     countTrigger = 120
-        //                 }
-        //         })
-                
-        // }
-        console.log(bl2Top+window.innerHeight)
-        if (bl2Top+window.innerHeight > 1100 && bl2Top+window.innerHeight < 1350) {
-            Array.from(showingTrigger).forEach(trigger => {
-                trigger.classList.remove('show')
-            })
-            Array.from(trgger1Class).forEach(trigger => {
-                trigger.classList.add('show')
-            })
-        } else if (bl2Top+window.innerHeight > 950 && bl2Top+window.innerHeight < 1100) {
-            Array.from(showingTrigger).forEach(trigger => {
-                trigger.classList.remove('show')
-            })
-            Array.from(trgger2Class).forEach(trigger => {
-                trigger.classList.add('show')
-            })
-        } else if (bl2Top+window.innerHeight > 750 && bl2Top+window.innerHeight < 950) {
-            Array.from(showingTrigger).forEach(trigger => {
-                trigger.classList.remove('show')
-            })
-            Array.from(trgger3Class).forEach(trigger => {
-                trigger.classList.add('show')
-            })
-        }
-    })
-
-    // Block 3 transition
-    Array.from(block3Item).forEach(item => {
-        if (!item.classList.contains('process-active')){
-            if (item.getBoundingClientRect().top < triggerBottom) {
-                item.classList.add('process-active')
-                loadingBlock3(0)
-            }
-        }
-        if (item.getBoundingClientRect().top < triggerBottom) {
-        }
-    })
-    
 }
 function onClickLoadBlock3(index) {
     clearTimeout(timer)
@@ -127,13 +54,125 @@ async function loadingBlock3(index) {
     timer = setTimeout(function() { loadingBlock3(index+1, false)}, 5000);
 }
 
-window.onload = (event) => {
-    callDisplayTransaction()
-};
+// fullpage
+
+function handleInBlock1(fullPage) {
+    fullPage[0].addEventListener('wheel', function(event) {
+        preventScroll(event)
+        if (event.deltaY > 0) {
+            countTrigger = 0
+            fullPage[1].scrollIntoView()
+            fullPage[0].classList.remove('display')
+            fullPage[1].classList.add('display')
+       }
+    })
+}
+
+function handleInBlock2(fullPage) {
+    fullPage[1].addEventListener('wheel', function(e) {
+        preventScroll(e)
+        // block 1 - image hidden
+        let block1Img =  Array.from(document.getElementsByClassName('bl1-img'))
+            block1Img.forEach(item => {
+            item.classList.remove('show')
+        })
+        if (e.deltaY > 0) {
+            countTrigger++
+        } else if (e.deltaY < 0) {
+            countTrigger--
+        }
+        if (countTrigger < 0) {
+            countTrigger = undefined
+            fullPage[0].scrollIntoView()
+            fullPage[1].classList.remove('display')
+            fullPage[0].classList.add('display')
+            callDisplayTransaction()
+        } else if (countTrigger <= 3) {
+            Array.from(showingTrigger).forEach(trigger => {
+                trigger.classList.remove('show')
+            })
+            Array.from(trgger1Class).forEach(trigger => {
+                trigger.classList.add('show')
+            })
+        } else if (countTrigger <= 6) {
+            Array.from(showingTrigger).forEach(trigger => {
+                trigger.classList.remove('show')
+            })
+            Array.from(trgger2Class).forEach(trigger => {
+                trigger.classList.add('show')
+            })
+        } else if (countTrigger <= 9) {
+            Array.from(showingTrigger).forEach(trigger => {
+                trigger.classList.remove('show')
+            })
+            Array.from(trgger3Class).forEach(trigger => {
+                trigger.classList.add('show')
+            })
+        } else if (countTrigger > 12) {
+            countTrigger = undefined
+            var triggerBottom = window.innerHeight / 5 * 4;
+            fullPage[2].scrollIntoView()
+            fullPage[1].classList.remove('display')
+            fullPage[2].classList.add('display')
+            Array.from(block3Item).forEach(item => {
+                if (!item.classList.contains('process-active')) {
+                    if (item.getBoundingClientRect().top < triggerBottom) {
+                        item.classList.add('process-active')
+                        loadingBlock3(0)
+                    }
+                }
+            })
+        }
+    })
+
+}
+
+function handleInBlock3(fullPage) {
+    fullPage[2].addEventListener('wheel', function(event) {
+        preventScroll(event)
+        if (event.deltaY < 0) {
+            countTrigger = 12
+            fullPage[1].scrollIntoView()
+            fullPage[2].classList.remove('display')
+            fullPage[1].classList.add('display')
+       } else if (event.deltaY > 0) {
+            fullPage[3].scrollIntoView()
+            fullPage[2].classList.remove('display')
+            fullPage[3].classList.add('display')
+       }
+    })
+}
+
+function handleInBlock4(fullPage) {
+    fullPage[3].addEventListener('wheel', function(event) {
+        preventScroll(event)
+        if (event.deltaY < 0) {
+            fullPage[2].scrollIntoView()
+            fullPage[3].classList.remove('display')
+            fullPage[2].classList.add('display')
+       } else if (event.deltaY > 0) {
+            fullPage[4].scrollIntoView()
+            fullPage[3].classList.remove('display')
+            fullPage[4].classList.add('display')
+            callDisplayTransaction()
+       }
+    })
+}
+
+function handleInBlock5(fullPage) {
+    fullPage[4].addEventListener('wheel', function(event) {
+        if (event.deltaY < 0){
+            if (fullPage[4].getBoundingClientRect().top <= 20) {
+                fullPage[3].scrollIntoView()
+                fullPage[4].classList.remove('display')
+                fullPage[3].classList.add('display')
+            }
+       }
+    })
+}
 
 function preventScroll(e){
     e.preventDefault();
     e.stopPropagation();
-
     return false;
 }

@@ -140,20 +140,76 @@
 .text-trigger.show h1 {
   color: #0076ff;
 }
-.text-trigger p {
-  opacity: 0;
+.text-trigger h5 {
+  overflow: hidden;
+  height: 0px;
+  width: 0px;
+  transition: tran-height-reverse 0.6s ease-in;
 }
-.text-trigger.show p {
+.text-trigger.show h5 {
   opacity: 1;
+  height: 30px;
+  width: 100%;
+  will-change: transform, opacity;
+}
+@keyframes tran-height {
+  0% {
+    height: 0%;
+    width: 0%;
+  }
+  100% {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@keyframes tran-height-reverse {
+  0% {
+    height: 100%;
+    width: 100%;
+  }
+  100% {
+    height: 0%;
+    width: 0%;
+  }
 }
 .trigger-img {
-  display: none;
   opacity: 0;
-  transform: translateY(-50%);
+  transform: translateY(-200%);
 }
 .show.trigger-img {
-  display: block;
   opacity: 1;
   transform: translateY(0);
-  transition: transform 0.4s ease;
+  transition: transform 0.6s ease;
+}
+.fullpage {
+  opacity: 0;
+  width: 1px;
+  transition: tran-width-reverse 0.2s ease-in-out;
+}
+.fullpage.display {
+  opacity: 1;
+  width: 100vw;
+  transition: tran-width 0.2s ease-in;
+}
+@keyframes tran-width {
+  0% {
+    opacity: 0;
+    width: 1px;
+  }
+  100% {
+    opacity: 1;
+    width: 100vw;
+  }
+}
+
+@keyframes tran-width-reverse {
+  0% {
+    opacity: 0;
+    width: 100vw;
+  }
+  100% {
+    opacity: 1;
+    width: 1px;
+  }
 }
