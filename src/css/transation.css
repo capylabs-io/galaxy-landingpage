@@ -182,34 +182,3 @@
   transform: translateY(0);
   transition: transform 0.6s ease;
 }
-.fullpage {
-  opacity: 0;
-  width: 1px;
-  transition: tran-width-reverse 0.2s ease-in-out;
-}
-.fullpage.display {
-  opacity: 1;
-  width: 100vw;
-  transition: tran-width 0.2s ease-in;
-}
-@keyframes tran-width {
-  0% {
-    opacity: 0;
-    width: 1px;
-  }
-  100% {
-    opacity: 1;
-    width: 100vw;
-  }
-}
-
-@keyframes tran-width-reverse {
-  0% {
-    opacity: 0;
-    width: 100vw;
-  }
-  100% {
-    opacity: 1;
-    width: 1px;
-  }
-}

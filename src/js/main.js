@@ -13,7 +13,7 @@ var countTrigger = 0
 
 window.onload = (event) => {
     const fullPageObjectArr = Array.from(fullPageObject)
-    callDisplayTransaction(fullPageObjectArr)
+    callDisplayTransaction()
     handleInBlock1(fullPageObjectArr)
     handleInBlock2(fullPageObjectArr)
     handleInBlock3(fullPageObjectArr)
@@ -23,8 +23,7 @@ window.onload = (event) => {
 window.addEventListener('scroll', function(event) {
     callDisplayTransaction()
 })
-function callDisplayTransaction(fullPage) {
-    fullPage[0].classList.add('display')
+function callDisplayTransaction() {
     Array.from(tranactionItems).forEach(item => {
         let itemTop = item.getBoundingClientRect().top
         if (itemTop < triggerBottom) {
@@ -62,8 +61,6 @@ function handleInBlock1(fullPage) {
         if (event.deltaY > 0) {
             countTrigger = 0
             fullPage[1].scrollIntoView()
-            fullPage[0].classList.remove('display')
-            fullPage[1].classList.add('display')
        }
     })
 }
@@ -84,8 +81,6 @@ function handleInBlock2(fullPage) {
         if (countTrigger < 0) {
             countTrigger = undefined
             fullPage[0].scrollIntoView()
-            fullPage[1].classList.remove('display')
-            fullPage[0].classList.add('display')
             callDisplayTransaction()
         } else if (countTrigger <= 3) {
             Array.from(showingTrigger).forEach(trigger => {
@@ -112,8 +107,6 @@ function handleInBlock2(fullPage) {
             countTrigger = undefined
             var triggerBottom = window.innerHeight / 5 * 4;
             fullPage[2].scrollIntoView()
-            fullPage[1].classList.remove('display')
-            fullPage[2].classList.add('display')
             Array.from(block3Item).forEach(item => {
                 if (!item.classList.contains('process-active')) {
                     if (item.getBoundingClientRect().top < triggerBottom) {
@@ -133,12 +126,8 @@ function handleInBlock3(fullPage) {
         if (event.deltaY < 0) {
             countTrigger = 12
             fullPage[1].scrollIntoView()
-            fullPage[2].classList.remove('display')
-            fullPage[1].classList.add('display')
        } else if (event.deltaY > 0) {
             fullPage[3].scrollIntoView()
-            fullPage[2].classList.remove('display')
-            fullPage[3].classList.add('display')
        }
     })
 }
@@ -148,12 +137,8 @@ function handleInBlock4(fullPage) {
         preventScroll(event)
         if (event.deltaY < 0) {
             fullPage[2].scrollIntoView()
-            fullPage[3].classList.remove('display')
-            fullPage[2].classList.add('display')
        } else if (event.deltaY > 0) {
             fullPage[4].scrollIntoView()
-            fullPage[3].classList.remove('display')
-            fullPage[4].classList.add('display')
             callDisplayTransaction()
        }
     })
@@ -164,8 +149,6 @@ function handleInBlock5(fullPage) {
         if (event.deltaY < 0){
             if (fullPage[4].getBoundingClientRect().top <= 20) {
                 fullPage[3].scrollIntoView()
-                fullPage[4].classList.remove('display')
-                fullPage[3].classList.add('display')
             }
        }
     })
