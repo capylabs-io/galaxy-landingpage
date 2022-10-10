@@ -179,3 +179,43 @@
 .show.trigger-img {
   transition: transform 1s ease;
 }
+.social-01 {
+  opacity: 0;
+}
+.social-01.show {
+  opacity: 1;
+}
+.trigger-img-bigger-ani {
+  opacity: 0;
+  transition: tran-bigger-reverse 1s ease;
+}
+.show.trigger-img-bigger-ani {
+  height: 247px;
+  width: 247px;
+  animation: tran-bigger 3s ;
+}
+@keyframes tran-bigger {
+  0% {
+    opacity: 0;
+    height: auto;
+    width: 10%;
+  }
+  100% {
+    opacity: 1;
+    height: auto;
+    width: 247px;
+  }
+}
+
+@keyframes tran-bigger-reverse {
+  0% {
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+  }
+  100% {
+    opacity: 1;
+    height: 0%;
+    width: 0%;
+  }
+}
