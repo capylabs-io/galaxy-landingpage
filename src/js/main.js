@@ -135,10 +135,10 @@ function handleInBlock3(fullPage) {
     if (event.deltaY < 0) {
         if (fullPage[2].getBoundingClientRect().top <= 20) {
             fullPage[1].scrollIntoView();
-          countTrigger = 2;
+            countTrigger = 2;
+            preventScroll(event)
         }
       }
-    //   preventScroll(event)
   });
 }
 
