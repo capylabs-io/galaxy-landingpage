@@ -246,6 +246,7 @@ body::-webkit-scrollbar {
 .platforms-group-img img {
   width: initial;
   height: 100%;
+  max-width: fit-content;
 }
 .block-6 .container {
   position: relative;
