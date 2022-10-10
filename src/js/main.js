@@ -97,6 +97,9 @@ function handleInBlock2(fullPage) {
       countTrigger = -1;
       fullPage[0].scrollIntoView();
       callDisplayTransaction();
+      Array.from(showingTrigger).forEach((trigger) => {
+        trigger.classList.remove("show");
+      });
     } else if (countTrigger == 0) {
       Array.from(showingTrigger).forEach((trigger) => {
         trigger.classList.remove("show");

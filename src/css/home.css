@@ -162,7 +162,7 @@ body::-webkit-scrollbar {
 }
 .digital-03 {
   position: absolute;
-  width: 120px;
+  width: 114px;
   height: 153px;
   top: 148px;
   right: 45px;
@@ -177,7 +177,7 @@ body::-webkit-scrollbar {
 }
 .digital-05 {
   position: absolute;
-  width: 120px;
+  width: 114px;
   height: 153px;
   left: 85px;
   top: 45px;
@@ -193,10 +193,10 @@ body::-webkit-scrollbar {
 }
 .digital-07 {
   position: absolute;
-  width: 297px;
-  height: 82px;
-  bottom: 0px;
-  left: 136px;
+  width: 327px;
+  height: auto;
+  bottom: 40px;
+  left: 118px;
   z-index: 50;
 }
 .digital-08 {
@@ -210,7 +210,7 @@ body::-webkit-scrollbar {
 .digital-09 {
   position: absolute;
   width: 98px;
-  height: 177px;
+  height: 142px;
   left: 93px;
   top: 130px;
   z-index: 20;
@@ -218,7 +218,7 @@ body::-webkit-scrollbar {
 .digital-10 {
   position: absolute;
   width: 98px;
-  height: 177px;
+  height: 142px;
   bottom: 100px;
   right: 55px;
   z-index: 40;
