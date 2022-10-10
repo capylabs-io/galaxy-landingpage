@@ -70,6 +70,7 @@ function handleInBlock1(fullPage) {
 function handleInBlock2(fullPage) {
     fullPage[1].addEventListener("wheel", function (e) {
         // block 1 - image hidden
+        if (countTrigger <= 2) preventScroll(e);
         let block1Img = Array.from(document.getElementsByClassName("bl1-img"));
         block1Img.forEach((item) => {
           item.classList.remove("show");
@@ -127,13 +128,12 @@ function handleInBlock2(fullPage) {
           });
         }
       });
-      if (countTrigger <= 2) preventScroll(e);
   }
 
 function handleInBlock3(fullPage) {
   fullPage[2].addEventListener("wheel", function (event) {
     if (event.deltaY < 0) {
-        if (fullPage[1].getBoundingClientRect().bottom >= 200) {
+        if (fullPage[2].getBoundingClientRect().top < 0) {
             fullPage[1].scrollIntoView();
             countTrigger = 2;
             preventScroll(event)
