@@ -42,33 +42,38 @@ body::-webkit-scrollbar {
 }
 .phone-img {
   width: 9.75rem;
+  height: auto;
   top: 0;
   left: 5.25rem;
 }
 .tether-img {
   width: 10rem;
+  height: auto;
   top: 5.5rem;
   left: -6rem;
 }
 .chainlink-img {
   width: 11rem;
+  height: auto;
   bottom: 2rem;
-  right: 9rem;
+  right: 7rem;
 }
 .iphone-14-pro-img {
   width: 100%;
-  height: 100%;
-  top: 0;
+  height: auto;
+  bottom: 0;
   left: 0;
   border-radius: 0 0 0 30px;
 }
 .card-img {
   width: 15rem;
+  height: auto;
   top: -2.5rem;
   right: -4rem;
 }
 .bitcoin-img {
   width: 15rem;
+  height: auto;
   bottom: 7.5rem;
   right: -6rem;
 }
@@ -97,19 +102,16 @@ body::-webkit-scrollbar {
 .block-3 {
   position: relative;
   height: 100vh;
-  max-height: 1080px;
-  min-height: 920px;
 }
 .bl3-content {
   height: calc(100vh - 4rem);
-  max-height: calc(1080px - 4rem);
-  min-height: calc(920px - 4rem);
 }
-.block-3::after {
+.block-3::before {
   content: "";
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: 0;
   width: 100%;
   height: 20%;
   background: linear-gradient(
@@ -137,12 +139,13 @@ body::-webkit-scrollbar {
   opacity: 0;
 }
 .step-img img {
-  z-index: 10;
   width: 100%;
+  z-index: 100;
 }
-.step-img::before {
+.step-img img::before {
   content: "";
   position: absolute;
+  z-index: 0;
   width: 490px;
   height: 100%;
   left: 0;
@@ -265,7 +268,7 @@ body::-webkit-scrollbar {
   width: 100%;
   min-height: 27.5rem;
   justify-content: center;
-  padding-left: 30%;
+  padding-left: 35%;
 }
 .block-7 {
   background-image: url("../assets/block-4/background.png");

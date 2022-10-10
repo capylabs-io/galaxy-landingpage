@@ -139,17 +139,16 @@
 }
 .text-trigger.show h1 {
   color: #0076ff;
+  font-weight: 700 !important;
 }
 .text-trigger h5 {
-  overflow: hidden;
-  height: 0px;
-  width: 0px;
+  opacity: 0;
+  padding-top: 0px;
   transition: tran-height-reverse 0.6s ease-in;
 }
 .text-trigger.show h5 {
   opacity: 1;
-  height: 30px;
-  width: 100%;
+  padding-top: 2rem;
   will-change: transform, opacity;
 }
 @keyframes tran-height {

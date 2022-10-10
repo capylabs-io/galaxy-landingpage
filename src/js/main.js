@@ -75,35 +75,38 @@ function handleInBlock2(fullPage) {
         })
         if (e.deltaY > 0) {
             countTrigger++
+            console.log("++")
         } else if (e.deltaY < 0) {
             countTrigger--
+            console.log("--")
         }
+        console.log(countTrigger)
         if (countTrigger < 0) {
             countTrigger = undefined
             fullPage[0].scrollIntoView()
             callDisplayTransaction()
-        } else if (countTrigger <= 3) {
+        } else if (countTrigger <= 7) {
             Array.from(showingTrigger).forEach(trigger => {
                 trigger.classList.remove('show')
             })
             Array.from(trgger1Class).forEach(trigger => {
                 trigger.classList.add('show')
             })
-        } else if (countTrigger <= 6) {
+        } else if (countTrigger <= 14) {
             Array.from(showingTrigger).forEach(trigger => {
                 trigger.classList.remove('show')
             })
             Array.from(trgger2Class).forEach(trigger => {
                 trigger.classList.add('show')
             })
-        } else if (countTrigger <= 9) {
+        } else if (countTrigger <= 21) {
             Array.from(showingTrigger).forEach(trigger => {
                 trigger.classList.remove('show')
             })
             Array.from(trgger3Class).forEach(trigger => {
                 trigger.classList.add('show')
             })
-        } else if (countTrigger > 12) {
+        } else if (countTrigger > 18) {
             countTrigger = undefined
             var triggerBottom = window.innerHeight / 5 * 4;
             fullPage[2].scrollIntoView()
@@ -124,7 +127,7 @@ function handleInBlock3(fullPage) {
     fullPage[2].addEventListener('wheel', function(event) {
         preventScroll(event)
         if (event.deltaY < 0) {
-            countTrigger = 12
+            countTrigger = 18
             fullPage[1].scrollIntoView()
        } else if (event.deltaY > 0) {
             fullPage[3].scrollIntoView()
