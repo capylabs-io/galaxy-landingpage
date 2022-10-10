@@ -245,6 +245,7 @@ body::-webkit-scrollbar {
 }
 .platforms-group-img img {
   max-width: initial;
+  width: auto;
   height: 100%;
 }
 .block-6 .container {

@@ -69,7 +69,6 @@ function handleInBlock1(fullPage) {
 
 function handleInBlock2(fullPage) {
     fullPage[1].addEventListener("wheel", function (e) {
-        preventScroll(e);
         // block 1 - image hidden
         let block1Img = Array.from(document.getElementsByClassName("bl1-img"));
         block1Img.forEach((item) => {
@@ -118,7 +117,6 @@ function handleInBlock2(fullPage) {
         } else if (countTrigger > 2) {
           countTrigger = 3;
           var triggerBottom = (window.innerHeight / 5) * 4;
-          fullPage[2].scrollIntoView();
           Array.from(block3Item).forEach((item) => {
             if (!item.classList.contains("process-active")) {
               if (item.getBoundingClientRect().top < triggerBottom) {
@@ -129,6 +127,7 @@ function handleInBlock2(fullPage) {
           });
         }
       });
+      if (countTrigger <= 2) preventScroll(e);
   }
 
 function handleInBlock3(fullPage) {
