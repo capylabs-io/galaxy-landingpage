@@ -65,7 +65,7 @@ function handleInBlock1(fullPage) {
   fullPage[0].addEventListener("wheel", function (event) {
     preventScroll(event);
     if (event.deltaY > 0) {
-      countTrigger = 0;
+      countTrigger = -1;
       fullPage[1].scrollIntoView();
     }
   });
