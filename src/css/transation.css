@@ -49,21 +49,6 @@
   opacity: 1;
   transform: translateY(0);
 }
-.ava-img:nth-child(1) {
-  animation-delay: 0s;
-}
-.ava-img:nth-child(2) {
-  animation-delay: 0.6s;
-}
-.ava-img:nth-child(3) {
-  animation-delay: 1.2s;
-}
-.ava-img:nth-child(4) {
-  animation-delay: 1.8s;
-}
-.ava-img:nth-child(5) {
-  animation-delay: 2.2s;
-}
 .complete-bar {
   height: 5px;
   background-color: #0076ff;
@@ -339,5 +324,109 @@
   100% {
     height: auto;
     width: 30px;
+  }
+}
+.move-crop-zone-left {
+  animation: move-crop-zone-left 1s ease;
+}
+.move-crop-zone-top {
+  animation: move-crop-zone-top 1s ease-out;
+}
+.move-crop-zone-watch {
+  object-position: 0px 16px;
+  transform-origin: left bottom;
+  animation: move-crop-zone-watch 1s ease-out;
+}
+.move-ava-2 {
+  animation: move-ava-2 1s ease-out;
+}
+.move-ava-3 {
+  animation: move-ava-3 1s ease-out;
+}
+.move-ava-4 {
+  animation: move-ava-4 1s ease-out;
+}
+
+@keyframes rotate-ava {
+  0% {
+    transform: rotate(-65deg);
+  }
+  80% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes move-ava-2 {
+  0% {
+    transform: translateX(-78px);
+  }
+  80% {
+    transform: translateX(12px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes move-ava-3 {
+  0% {
+    transform: translateX(-156px);
+  }
+  80% {
+    transform: translateX(12px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes move-ava-4 {
+  0% {
+    transform: translateX(-234px);
+  }
+  80% {
+    transform: translateX(12px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes move-crop-zone-top {
+  0% {
+    object-position: 0px 640px;
+  }
+  90% {
+    object-position: 0px 0px;
+  }
+  100% {
+    object-position: 0px 32px;
+  }
+}
+
+@keyframes move-crop-zone-left {
+  0% {
+    object-position: right;
+  }
+  90% {
+    object-position: 32px;
+  }
+  100% {
+    object-position: 0px;
+  }
+}
+@keyframes move-crop-zone-watch {
+  0% {
+    object-position: 0px 640px;
+    transform: rotate(45deg);
+  }
+  90% {
+    object-position: 0px 0px;
+    /* transform: rotate(-2deg); */
+  }
+  100% {
+    object-position: 0px 16px;
+    transform: rotate(0deg);
   }
 }
