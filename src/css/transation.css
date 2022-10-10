@@ -13,6 +13,10 @@
   opacity: 0;
   transform: translateY(50%);
 }
+.from-bottom-end {
+  opacity: 0;
+  transform: translateY(200%);
+}
 .from-top {
   opacity: 0;
   transform: translateY(-200%);
@@ -40,6 +44,10 @@
 .from-bottom.show {
   opacity: 1;
   transform: translateX(0);
+}
+.from-bottom-end.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 .ava-img:nth-child(1) {
   animation-delay: 0s;

@@ -96,6 +96,10 @@ body::-webkit-scrollbar {
 .block-2-right {
   position: relative;
 }
+.trigger-img-block {
+  position: relative;
+  max-height: 582px;
+}
 .trigger-img {
   position: absolute;
 }
@@ -122,7 +126,7 @@ body::-webkit-scrollbar {
 .portfolio-04 {
   position: absolute;
   z-index: 60;
-  left: -30px;
+  left: -90px;
   top: 230px;
   width: 252px;
   height: 102px;
