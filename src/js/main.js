@@ -16,9 +16,9 @@ window.onload = (event) => {
     callDisplayTransaction()
     handleInBlock1(fullPageObjectArr)
     handleInBlock2(fullPageObjectArr)
-    handleInBlock3(fullPageObjectArr)
-    handleInBlock4(fullPageObjectArr)
-    handleInBlock5(fullPageObjectArr)
+    fullPageObjectArr[3].addEventListener('scroll', function(event) {
+        callDisplayTransaction()
+    })
 };
 window.addEventListener('scroll', function(event) {
     callDisplayTransaction()
@@ -119,40 +119,6 @@ function handleInBlock2(fullPage) {
         }
     })
 
-}
-
-function handleInBlock3(fullPage) {
-    fullPage[2].addEventListener('wheel', function(event) {
-        preventScroll(event)
-        if (event.deltaY < 0) {
-            countTrigger = 18
-            fullPage[1].scrollIntoView()
-       } else if (event.deltaY > 0) {
-            fullPage[3].scrollIntoView()
-       }
-    })
-}
-
-function handleInBlock4(fullPage) {
-    fullPage[3].addEventListener('wheel', function(event) {
-        preventScroll(event)
-        if (event.deltaY < 0) {
-            fullPage[2].scrollIntoView()
-       } else if (event.deltaY > 0) {
-            fullPage[4].scrollIntoView()
-            callDisplayTransaction()
-       }
-    })
-}
-
-function handleInBlock5(fullPage) {
-    fullPage[4].addEventListener('wheel', function(event) {
-        if (event.deltaY < 0){
-            if (fullPage[4].getBoundingClientRect().top <= 20) {
-                fullPage[3].scrollIntoView()
-            }
-       }
-    })
 }
 
 function preventScroll(e){
