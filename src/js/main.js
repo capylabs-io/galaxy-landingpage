@@ -115,7 +115,7 @@ function handleInBlock2(fullPage) {
             trigger.classList.add("show");
           });
         } else if (countTrigger > 2) {
-          countTrigger = 3;
+          countTrigger = 2;
           var triggerBottom = (window.innerHeight / 5) * 4;
           fullPage[2].scrollIntoView();
           Array.from(block3Item).forEach((item) => {
@@ -134,9 +134,11 @@ function handleInBlock3(fullPage) {
   fullPage[2].addEventListener("wheel", function (event) {
     if (event.deltaY < 0) {
         if (fullPage[2].getBoundingClientRect().top <= 20) {
-          fullPage[1].scrollIntoView();
+            fullPage[1].scrollIntoView();
+          countTrigger = 2;
         }
       }
+      preventScroll(event)
   });
 }
 
