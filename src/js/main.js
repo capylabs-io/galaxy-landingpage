@@ -114,8 +114,9 @@ function handleInBlock2(fullPage) {
           Array.from(trgger3Class).forEach((trigger) => {
             trigger.classList.add("show");
           });
+          fullPage[1].scrollIntoView();
         } else if (countTrigger > 2) {
-          countTrigger = 2;
+          countTrigger = 3;
           var triggerBottom = (window.innerHeight / 5) * 4;
           fullPage[2].scrollIntoView();
           Array.from(block3Item).forEach((item) => {
