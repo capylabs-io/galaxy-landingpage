@@ -75,10 +75,8 @@ function handleInBlock2(fullPage) {
         })
         if (e.deltaY > 0) {
             countTrigger++
-            console.log("++")
         } else if (e.deltaY < 0) {
             countTrigger--
-            console.log("--")
         }
         console.log(countTrigger)
         if (countTrigger < 0) {
