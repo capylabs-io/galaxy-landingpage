@@ -2,8 +2,8 @@
 body {
   font-family: "Bai Jamjuree", sans-serif;
   overflow-x: hidden;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 body::-webkit-scrollbar {
   display: none;
@@ -78,7 +78,7 @@ body::-webkit-scrollbar {
   right: -6rem;
 }
 .block-2 {
-  overflow:hidden;
+  overflow: hidden;
   height: 100vh;
   max-height: 1080px;
   min-height: 734px;
@@ -98,6 +98,34 @@ body::-webkit-scrollbar {
 }
 .trigger-img {
   position: absolute;
+}
+.portfolio-01 {
+  position: relative;
+  max-width: 457px;
+  z-index: 50;
+}
+.portfolio-02 {
+  position: absolute;
+  bottom: 98px;
+  right: 50px;
+  width: 265px;
+  height: 73px;
+  z-index: 60;
+}
+.portfolio-03 {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 115px;
+  z-index: 20;
+}
+.portfolio-04 {
+  position: absolute;
+  z-index: 60;
+  left: -30px;
+  top: 230px;
+  width: 252px;
+  height: 102px;
 }
 .block-3 {
   position: relative;
@@ -258,7 +286,7 @@ body::-webkit-scrollbar {
   left: 6rem;
   max-height: 37.5rem;
 }
-.block-6 .container .iphone-pro img{
+.block-6 .container .iphone-pro img {
   max-height: 37.5rem;
 }
 .bl6-content {
