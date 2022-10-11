@@ -412,7 +412,6 @@ body::-webkit-scrollbar {
   position: relative;
   width: 836px;
   height: 575px;
-  margin-right: -80px;
 }
 .video-frame img {
   position: absolute;
@@ -450,6 +449,20 @@ body::-webkit-scrollbar {
 }
 .video-des {
   max-width: 360px;
+}
+@media screen and (min-width: 1536px) {
+  .video-block {
+    transform: translateY(-60%);
+  }
+  .video-frame {
+    width: 1086px;
+    height: 747px;
+  }
+  .video-frame video {
+    width: 930px;
+    height: 702px;
+    top: 48px;
+  }
 }
 .bg-block-4 {
   background: linear-gradient(
