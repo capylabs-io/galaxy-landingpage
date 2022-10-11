@@ -65,7 +65,7 @@ function handleInBlock1(fullPage) {
     preventScroll(event);
     if (event.deltaY > 0) {
       countTrigger = -1;
-      fullPage[1].scrollIntoView();
+      fullPage[1].scrollIntoView({ behavior: 'smooth'});
     }
   });
 }
@@ -83,18 +83,18 @@ function handleInBlock2(fullPage) {
       countTrigger++;
       setTimeout(function () {
         isUserScrolling = false;
-      }, 500);
+      }, 800);
     } else if (e.deltaY < 0 && !isUserScrolling) {
       isUserScrolling = true;
       countTrigger--;
       setTimeout(function () {
         isUserScrolling = false;
-      }, 500);
+      }, 800);
     }
     
     if (countTrigger < 0) {
       countTrigger = -1;
-      fullPage[0].scrollIntoView();
+      fullPage[0].scrollIntoView({ behavior: 'smooth'});
       callDisplayTransaction(tranactionBlock1);
       Array.from(showingTrigger).forEach((trigger) => {
         trigger.classList.remove("show");
@@ -140,7 +140,7 @@ function handleInBlock3(fullPage) {
   fullPage[2].addEventListener("wheel", function (event) {
     if (event.deltaY < 0) {
       if (fullPage[2].getBoundingClientRect().top < 0) {
-        fullPage[1].scrollIntoView();
+        fullPage[1].scrollIntoView({ behavior: 'smooth'});
         countTrigger = 2;
         preventScroll(event);
       }
