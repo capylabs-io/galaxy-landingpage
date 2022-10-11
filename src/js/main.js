@@ -1,6 +1,5 @@
+const tranactionBlock1 = document.getElementsByClassName("display-transation-1");
 const tranactionItems = document.getElementsByClassName("display-transation");
-const block1Item = document.getElementsByClassName("block-1");
-const block2Item = document.getElementsByClassName("block-2");
 const block3Item = document.getElementsByClassName("block-3");
 const trgger1Class = document.getElementsByClassName("trigger-1");
 const trgger2Class = document.getElementsByClassName("trigger-2");
@@ -14,18 +13,18 @@ var isUserScrolling = false;
 
 window.onload = (event) => {
   const fullPageObjectArr = Array.from(fullPageObject);
-  callDisplayTransaction();
+  callDisplayTransaction(tranactionBlock1);
   handleInBlock1(fullPageObjectArr);
   handleInBlock2(fullPageObjectArr);
   fullPageObjectArr[3].addEventListener("scroll", function (event) {
-    callDisplayTransaction();
+    callDisplayTransaction(tranactionItems);
   });
   handleInBlock3(fullPageObjectArr);
 };
 window.addEventListener("scroll", function (event) {
-  callDisplayTransaction();
+  callDisplayTransaction(tranactionItems);
 });
-function callDisplayTransaction() {
+function callDisplayTransaction(tranactionItems) {
   Array.from(tranactionItems).forEach((item) => {
     let itemTop = item.getBoundingClientRect().top;
     if (itemTop < triggerBottom) {
@@ -92,11 +91,11 @@ function handleInBlock2(fullPage) {
         isUserScrolling = false;
       }, 500);
     }
-
+    
     if (countTrigger < 0) {
       countTrigger = -1;
       fullPage[0].scrollIntoView();
-      callDisplayTransaction();
+      callDisplayTransaction(tranactionBlock1);
       Array.from(showingTrigger).forEach((trigger) => {
         trigger.classList.remove("show");
       });

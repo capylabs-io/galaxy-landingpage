@@ -423,10 +423,9 @@ body::-webkit-scrollbar {
 .video-frame video {
   position: absolute;
   width: 716px;
-  height: 540px;
-  border-radius: 20px 0 0 20px;
+  height: 541px;
   object-fit: cover;
-  top: 38px;
+  top: 36px;
   right: 0;
 }
 @media screen and (max-width: 1400px) {
@@ -438,7 +437,20 @@ body::-webkit-scrollbar {
     width: 590px;
     height: 408px;
     top: 30px;
-    border-radius: 0px 16px;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .video-block {
+    transform: translateY(-60%);
+  }
+  .video-frame {
+    width: 859px;
+    height: 649px;
+  }
+  .video-frame video {
+    width: 736px;
+    height: 558px;
+    top: 36px;
   }
 }
 .block-4 .container{
@@ -449,20 +461,6 @@ body::-webkit-scrollbar {
 }
 .video-des {
   max-width: 360px;
-}
-@media screen and (min-width: 1536px) {
-  .video-block {
-    transform: translateY(-60%);
-  }
-  .video-frame {
-    width: 1086px;
-    height: 747px;
-  }
-  .video-frame video {
-    width: 930px;
-    height: 702px;
-    top: 48px;
-  }
 }
 .bg-block-4 {
   background: linear-gradient(
@@ -569,4 +567,7 @@ body::-webkit-scrollbar {
 }
 .fullpage .top {
   display: none;
+}
+.bg-button {
+  background: rgba(0, 118, 255, 0.05);
 }
