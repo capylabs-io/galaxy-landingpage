@@ -5,6 +5,23 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+@media screen and (min-width: 1280px) {
+  .pc-page {
+    display: block;
+  }
+  .mobile-page {
+    display: none;
+  }
+}
+@media screen and (max-width: 1179px) {
+  .pc-page {
+    display: none;
+  }
+  .mobile-page {
+    display: block;
+    overflow-x: hidden;
+  }
+}
 body::-webkit-scrollbar {
   display: none;
 }
@@ -436,9 +453,9 @@ body::-webkit-scrollbar {
   }
   .video-frame video {
     width: 590px;
-    height: 408px;
+    height: 458px;
     top: 30px;
-    border-radius: 0px 16px;
+    border-radius: 16px 0 0 16px;
   }
 }
 .block-4 .container{
@@ -540,6 +557,11 @@ body::-webkit-scrollbar {
   justify-content: center;
   padding-left: 35%;
 }
+@media screen and (max-width: 1279px) {
+  .bl6-content {
+    padding-left: 42%;
+  }
+}
 .block-7 {
   background-image: url("../assets/block-4/background.png");
   background-size: cover;
@@ -569,4 +591,64 @@ body::-webkit-scrollbar {
 }
 .fullpage .top {
   display: none;
+}
+
+/* mobile */
+@media screen and (max-width: 1179px) {
+  .phone-img {
+    position: absolute;
+    width: 81px;
+    height: auto;
+    top: 0;
+    left: 5.25rem;
+  }
+  .tether-img {
+    position: absolute;
+    width: 118px;
+    height: auto;
+    top: 5.5rem;
+    left:0rem;
+  }
+  .chainlink-img {
+    position: absolute;
+    width: 102px;
+    height: auto;
+    bottom: 2rem;
+    right: 0.75rem;
+  }
+  .iphone-14-pro-img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 0 30px;
+  }
+  .card-img {
+    position: absolute;
+    width: 124px;
+    height: auto;
+    top: 0rem;
+    right: 2rem;
+  }
+  .bitcoin-img {
+    position: absolute;
+    width: 165px;
+    height: auto;
+    bottom: 165px;
+    right: 0rem;
+  }
+}
+.m-block-1-right {
+  position: relative;
+  background: linear-gradient( 70.11deg, rgba(198, 235, 255, 0.4) 0.4%, rgba(219, 238, 255, 0.4) 22.71%, rgba(198, 235, 255, 0.4) 49.68%, rgba(234, 231, 255, 0.4) 75.62%, rgba(247, 247, 221, 0.4) 93.26% ), #ffffff;
+  border-radius: 30px;
+  min-height: 600px;
+}
+.m-block-2 {
+  background: linear-gradient(70.11deg, rgba(198, 235, 255, 0.4) 0.4%, rgba(219, 238, 255, 0.4) 22.71%, rgba(198, 235, 255, 0.4) 49.68%, rgba(234, 231, 255, 0.4) 75.62%, rgba(247, 247, 221, 0.4) 93.26%), #FFFFFF;
+}
+.m-block-2-image {
+  width: 100%;
+  height: 100%;
 }

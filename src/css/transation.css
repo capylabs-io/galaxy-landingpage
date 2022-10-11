@@ -13,6 +13,10 @@
   opacity: 0;
   transform: translateY(50%);
 }
+.from-bottom-top {
+  opacity: 0;
+  transform: translateY(50px);
+}
 .from-bottom-end {
   opacity: 0;
   transform: translateY(200%);
@@ -24,6 +28,10 @@
 .from-bottom-left {
   opacity: 0;
   transform: translate(-50%, 200%);
+}
+.from-bottom-top.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 .from-bottom-left.show {
   opacity: 1;

@@ -12,6 +12,12 @@ var timer;
 var countTrigger = 0;
 var isUserScrolling = false;
 
+if (window.innerWidth < 1196) {
+  window.addEventListener("scroll", function (event) {
+    callDisplayTransaction();
+  });
+}
+
 window.onload = (event) => {
   const fullPageObjectArr = Array.from(fullPageObject);
   callDisplayTransaction();
