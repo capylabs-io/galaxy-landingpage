@@ -392,6 +392,7 @@ body::-webkit-scrollbar {
   }
 }
 .block-4 {
+  position: relative;
   background-image: url("../assets/block-4/background.png");
   width: 100vw;
   height: 100vh;
@@ -400,6 +401,12 @@ body::-webkit-scrollbar {
   background-size: cover;
   background-repeat: no-repeat;
   margin: auto;
+}
+.video-block {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-55%);
 }
 .video-frame {
   position: relative;
@@ -434,6 +441,15 @@ body::-webkit-scrollbar {
     top: 30px;
     border-radius: 0px 16px;
   }
+}
+.block-4 .container{
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, 100%);
+}
+.video-des {
+  max-width: 360px;
 }
 .bg-block-4 {
   background: linear-gradient(
