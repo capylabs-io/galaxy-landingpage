@@ -155,6 +155,9 @@ function handleInBlock2(fullPage) {
       Array.from(textBlock2).forEach(item => {
         item.classList.remove('move-from-bottom');
       })
+      Array.from(showingTrigger).forEach((trigger) => {
+        trigger.classList.remove("show");
+      });
     } else if (countTrigger == 0) {
       Array.from(showingTrigger).forEach((trigger) => {
         trigger.classList.remove("show");
