@@ -36,7 +36,6 @@
                   tabindex="-1"
                 >
                   <div class="py-1" role="none">
-                    <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
                     <a
                       href="https://galaxyfinance.io/"
                       class="block px-4 py-2 text-xl font-light menu-item"
@@ -70,7 +69,7 @@
                       >Deck</a
                     >
                     <a
-                      href="#"
+                      onclick="goToFooter()"
                       class="block px-4 py-2 text-xl font-light menu-item"
                       role="menuitem"
                       tabindex="-1"
@@ -108,7 +107,7 @@
               </button>
             </div>
           </div>
-          <div class="block-1-right">
+          <div class="block-1-right overflow-hidden">
             <img
               class="bl1-img phone-img display-transation-1 display-transation from-right"
               loading="lazy"
@@ -510,7 +509,7 @@
           </div>
         </div>
       </div>
-      <div class="block-8">
+      <div class="block-8" id="footer">
         <div class="container p-24 flex flex-row flex-wrap m-auto justify-between">
           <div>
             <div class="flex flex-row">

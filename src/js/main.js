@@ -18,6 +18,10 @@ function toggleMenu() {
   else dropdownMenu.classList.add("show-menu");
 }
 
+function goToFooter() {
+  document.getElementById("footer").scrollIntoView({ behavior: "smooth" });
+}
+
 window.onclick = function (event) {
   if (event.target.id != "menu-button") {
     var dropdowns = document.getElementsByClassName("dropdown-content");

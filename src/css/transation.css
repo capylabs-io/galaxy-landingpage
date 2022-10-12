@@ -355,16 +355,19 @@
 .show.move-crop-zone-left {
   animation: move-crop-zone-left 2s forwards;
 }
+.apple-watch-block{
+  overflow: hidden;
+}
 .move-crop-zone-top {
   opacity: 0;
   object-position: 0px 640px;
 }
 .show.move-crop-zone-top {
-  animation: move-crop-zone-top 1.5s forwards;
+  animation: move-crop-zone-top 1s forwards;
 }
 .move-crop-zone-watch {
   object-position: 0px 640px;
-  transform: rotate(45deg);
+  /* transform: rotate(45deg); */
 }
 .show .move-crop-zone-watch {
   animation: move-crop-zone-watch 1s forwards;
@@ -453,14 +456,15 @@
     object-position: 0px;
   }
 }
+
 @keyframes move-crop-zone-watch {
   0% {
-    object-position: 0px 640px;
+    object-position: 0px 960px;
     transform: rotate(45deg);
   }
   90% {
     object-position: 0px 0px;
-    /* transform: rotate(-2deg); */
+    transform: rotate(-2deg);
   }
   100% {
     object-position: 0px 16px;

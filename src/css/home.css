@@ -588,3 +588,7 @@ body::-webkit-scrollbar {
 .dropdown-content.show-menu {
   display: block;
 }
+
+.overflow-hidden{
+  overflow: hidden;
+}
