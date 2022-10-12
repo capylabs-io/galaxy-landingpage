@@ -44,6 +44,9 @@ window.onload = (event) => {
     callDisplayTransaction(tranactionItems);
   });
   handleInBlock3(fullPageObjectArr);
+  if (window.innerWidth < 1179) {
+    loadingBlock3(0);
+  }
 };
 
 window.addEventListener("scroll", function (event) {
@@ -65,17 +68,29 @@ function onClickLoadBlock3(index) {
 }
 
 async function loadingBlock3(index) {
-  const processBar = Array.from(document.getElementsByClassName("slide"));
-  let activeElement = Array.from(document.getElementsByClassName("slide active"));
-  if (index >= processBar.length) {
+  let processBar;
+  let activeElement;
+  if (window.innerWidth >= 1180) {
+    processBar = Array.from(document.getElementsByClassName("slide"));
+    activeElement = Array.from(document.getElementsByClassName("slide active"));
+  } else {
+    processBar = Array.from(document.getElementsByClassName("block-2-m-slide"));
+    activeElement = Array.from(document.getElementsByClassName("block-2-m-slide active"));
+  }
+console.log(processBar.length)
+  if (index >= 3) {
     index = 0;
   }
   // active class remove
   activeElement.forEach((item) => {
-    item.classList.remove("active");
+    item.classList.remove('active');
   });
   // add active class
-  processBar[index].classList.add("active");
+  processBar[index].classList.add('active');
+  if (window.innerWidth < 1179) {
+    processBar[index+3].classList.add('active');
+  }
+  
   timer = setTimeout(function () {
     loadingBlock3(index + 1, false);
   }, 5000);
