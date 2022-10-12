@@ -116,13 +116,16 @@ function handleInBlock1(fullPage) {
   fullPage[0].addEventListener("wheel", function (event) {
     preventScroll(event);
     if (event.deltaY > 0) {
-      countTrigger = -1;
+      countTrigger = 0;
       fullPage[1].scrollIntoView({ behavior: "smooth" });
       Array.from(textBlock2).forEach(item => {
         item.classList.add('move-from-bottom');
       })
       Array.from(tranactionBlock1).forEach((item) => {
         item.classList.remove("show");
+      });
+      Array.from(trgger1Class).forEach((trigger) => {
+        trigger.classList.add("show");
       });
     }
   });
@@ -145,17 +148,13 @@ function handleInBlock2(fullPage) {
       }, 800);
       // if (countTrigger <= -2) preventScroll(e);
     }
-    if (countTrigger < -1) {
+    if (countTrigger <= -1) {
       countTrigger = -2;
       fullPage[0].scrollIntoView({ behavior: "smooth" });
       callDisplayTransaction(tranactionBlock1);
       Array.from(textBlock2).forEach(item => {
         item.classList.remove('move-from-bottom');
       })
-    } else if (countTrigger == -1) {
-      Array.from(showingTrigger).forEach((trigger) => {
-        trigger.classList.remove("show");
-      });
     } else if (countTrigger == 0) {
       Array.from(showingTrigger).forEach((trigger) => {
         trigger.classList.remove("show");

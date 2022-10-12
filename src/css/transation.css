@@ -391,7 +391,7 @@
 }
 .move-crop-zone-top {
   opacity: 0;
-  object-position: 0px 640px;
+  object-position: 0px 340px;
 }
 .show.move-crop-zone-top {
   animation: move-crop-zone-top 1s forwards;
