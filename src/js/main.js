@@ -11,6 +11,26 @@ var timer;
 var countTrigger = 0;
 var isUserScrolling = false;
 
+//menu
+function toggleMenu() {
+  var dropdownMenu = document.getElementById("dropdown-menu");
+  if (dropdownMenu.classList.contains("show-menu")) dropdownMenu.classList.remove("show-menu");
+  else dropdownMenu.classList.add("show-menu");
+}
+
+window.onclick = function (event) {
+  if (event.target.id != "menu-button") {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains("show-menu")) {
+        openDropdown.classList.remove("show-menu");
+      }
+    }
+  }
+};
+
 window.onload = (event) => {
   const fullPageObjectArr = Array.from(fullPageObject);
   callDisplayTransaction(tranactionBlock1);
@@ -21,6 +41,7 @@ window.onload = (event) => {
   });
   handleInBlock3(fullPageObjectArr);
 };
+
 window.addEventListener("scroll", function (event) {
   callDisplayTransaction(tranactionItems);
 });
@@ -41,9 +62,7 @@ function onClickLoadBlock3(index) {
 
 async function loadingBlock3(index) {
   const processBar = Array.from(document.getElementsByClassName("slide"));
-  let activeElement = Array.from(
-    document.getElementsByClassName("slide active")
-  );
+  let activeElement = Array.from(document.getElementsByClassName("slide active"));
   if (index >= processBar.length) {
     index = 0;
   }
@@ -59,13 +78,12 @@ async function loadingBlock3(index) {
 }
 
 // fullpage
-
 function handleInBlock1(fullPage) {
   fullPage[0].addEventListener("wheel", function (event) {
     preventScroll(event);
     if (event.deltaY > 0) {
       countTrigger = -1;
-      fullPage[1].scrollIntoView({ behavior: 'smooth'});
+      fullPage[1].scrollIntoView({ behavior: "smooth" });
     }
   });
 }
@@ -90,12 +108,15 @@ function handleInBlock2(fullPage) {
       setTimeout(function () {
         isUserScrolling = false;
       }, 800);
+      // if (countTrigger <= -2) preventScroll(e);
     }
-    
-    if (countTrigger < 0) {
-      countTrigger = -1;
-      fullPage[0].scrollIntoView({ behavior: 'smooth'});
-      callDisplayTransaction(tranactionBlock1);
+
+    if (countTrigger < -1) {
+      countTrigger = -2;
+      fullPage[0].scrollIntoView({ behavior: "smooth" });
+      callDisplayTransaction(tranactionItems);
+    } else if (countTrigger == -1) {
+      fullPage[1].scrollIntoView({ behavior: "smooth" });
       Array.from(showingTrigger).forEach((trigger) => {
         trigger.classList.remove("show");
       });
@@ -140,7 +161,7 @@ function handleInBlock3(fullPage) {
   fullPage[2].addEventListener("wheel", function (event) {
     if (event.deltaY < 0) {
       if (fullPage[2].getBoundingClientRect().top < 0) {
-        fullPage[1].scrollIntoView({ behavior: 'smooth'});
+        fullPage[1].scrollIntoView({ behavior: "smooth" });
         countTrigger = 2;
         preventScroll(event);
       }

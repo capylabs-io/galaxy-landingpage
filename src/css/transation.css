@@ -4,6 +4,10 @@
 .display-transation-1 {
   transition: transform 0.6s ease;
 }
+/* .display-iphone-14-pro {
+  object-position: 0px 16px;
+  animation: move-crop-zone-iphone 0.6s ease;
+} */
 .from-right {
   opacity: 0;
   transform: translateX(200%);
@@ -73,6 +77,21 @@
 }
 .active .step-img {
   animation: tran-opacity 0.4s forwards;
+}
+.delay-animation{
+  animation-delay: 1s;
+}
+
+@keyframes move-crop-zone-iphone {
+  0% {
+    object-position: 0px 640px;
+  }
+  90% {
+    object-position: 0px 0px;
+  }
+  100% {
+    object-position: 0px 16px;
+  }
 }
 
 @keyframes tran-opacity {

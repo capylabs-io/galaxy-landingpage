@@ -562,12 +562,29 @@ body::-webkit-scrollbar {
   box-shadow: 0px 11px 40px rgba(0, 118, 255, 0.1);
 }
 .icon {
-  width: 43px;
-  height: 43px;
+  width: 24px;
+  height: 24px;
 }
 .fullpage .top {
   display: none;
 }
 .bg-button {
   background: rgba(0, 118, 255, 0.05);
+}
+
+.menu-item:hover{
+  color: #0076ff;
+  background: rgba(0, 118, 255, 0.05);
+  border-radius: 16px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  min-width: 164px;
+  display: none;
+}
+.dropdown-content.show-menu {
+  display: block;
 }
