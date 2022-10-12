@@ -43,15 +43,31 @@ window.onload = (event) => {
   fullPageObjectArr[3].addEventListener("scroll", function (event) {
     callDisplayTransaction(tranactionItems);
   });
-  handleInBlock3(fullPageObjectArr);
+  // handleInBlock3(fullPageObjectArr);
   if (window.innerWidth < 1179) {
     loadingBlock3(0);
   }
+  
 };
 
 window.addEventListener("scroll", function (event) {
+  let triggerForBlock2 = Array.from(fullPageObject)[1].scrollHeight + 0.75*window.innerHeight;
+  if (window.screenY <= triggerForBlock2 && window.screenY >= Array.from(fullPageObject)[1].scrollHeight) {
+    debounce(handleScroll, 500);
+    preventScroll(event);
+    countTrigger = -1;
+    fullPage[1].scrollIntoView({ behavior: "smooth" });
+  }
+  console.log("scroll position: "+window.scrollY)
+  console.log("trigger: " + triggerForBlock2)
   callDisplayTransaction(tranactionItems);
 });
+function debounce(method, delay) {
+  clearTimeout(method._tId);
+  method._tId= setTimeout(function(){
+      method();
+  }, delay);
+}
 function callDisplayTransaction(tranactionItems) {
   Array.from(tranactionItems).forEach((item) => {
     let itemTop = item.getBoundingClientRect().top;
@@ -77,7 +93,6 @@ async function loadingBlock3(index) {
     processBar = Array.from(document.getElementsByClassName("block-2-m-slide"));
     activeElement = Array.from(document.getElementsByClassName("block-2-m-slide active"));
   }
-console.log(processBar.length)
   if (index >= 3) {
     index = 0;
   }
@@ -129,7 +144,7 @@ function handleInBlock2(fullPage) {
       }, 800);
       // if (countTrigger <= -2) preventScroll(e);
     }
-
+    // console.log(countTrigger);
     if (countTrigger < -1) {
       countTrigger = -2;
       fullPage[0].scrollIntoView({ behavior: "smooth" });
@@ -179,10 +194,10 @@ function handleInBlock2(fullPage) {
 function handleInBlock3(fullPage) {
   fullPage[2].addEventListener("wheel", function (event) {
     if (event.deltaY < 0) {
-      if (fullPage[2].getBoundingClientRect().top < 0) {
+      if (fullPage[2].getBoundingClientRect().top <= 0) {
+        preventScroll(event);
         fullPage[1].scrollIntoView({ behavior: "smooth" });
         countTrigger = 2;
-        preventScroll(event);
       }
     }
   });
