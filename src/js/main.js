@@ -52,11 +52,13 @@ window.onload = (event) => {
 };
 
 window.addEventListener("scroll", function (event) {
+  if (window.innerWidth > 1179) {
   let triggerForBlock2 = Array.from(fullPageObject)[1].scrollHeight + 0.75*window.innerHeight;
-  if (window.screenY <= triggerForBlock2 && window.screenY >= Array.from(fullPageObject)[1].scrollHeight*0.75) {
-    debounce(handleScroll, 500);
-    countTrigger = 2;
-    fullPage[1].scrollIntoView({ behavior: "smooth" });
+    if (window.screenY <= triggerForBlock2 && window.screenY >= Array.from(fullPageObject)[1].scrollHeight*0.75) {
+      debounce(handleScroll, 500);
+      countTrigger = 2;
+      fullPage[1].scrollIntoView({ behavior: "smooth" });
+    }
   }
   callDisplayTransaction(tranactionItems);
 });
