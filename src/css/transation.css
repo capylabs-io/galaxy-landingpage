@@ -1,6 +1,9 @@
 .display-transation {
   transition: transform 0.6s ease;
 }
+.display-transation-1 {
+  transition: transform 0.8s ease-in;
+}
 /* .display-iphone-14-pro {
   object-position: 0px 16px;
   animation: move-crop-zone-iphone 0.6s ease;
@@ -116,7 +119,12 @@
     object-position: 0px 16px;
   }
 }
-
+.fade-out {
+  animation: tran-opacity-reverse 3s ease-in;
+}
+.fade-in {
+  animation: tran-opacity 2s ease-in;
+}
 @keyframes tran-opacity {
   0% {
     opacity: 0;
@@ -492,5 +500,18 @@
   100% {
     object-position: 0px 16px;
     transform: rotate(0deg);
+  }
+}
+.move-from-bottom {
+ animation: move-from-bottom 1.2s;
+}
+@keyframes move-from-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
