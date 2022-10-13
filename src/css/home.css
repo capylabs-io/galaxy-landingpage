@@ -738,8 +738,8 @@ body::-webkit-scrollbar {
 
   .iphone-14-pro-img {
     position: absolute;
-    width: 100%;
-    height: auto;
+    aspect-ratio: auto;
+    height: 100%;
     bottom: 0;
     left: 0;
     border-radius: 0 0 0 30px;
@@ -772,6 +772,9 @@ body::-webkit-scrollbar {
     height: 335px;
     overflow: hidden;
   }
+  .video-des {
+    max-width: 100vw;
+  }
 }
 
 .m-block-1-right {
@@ -789,7 +792,12 @@ body::-webkit-scrollbar {
   border-radius: 30px;
   min-height: 600px;
 }
-
+@media screen and (max-width: 1023px) and (min-width: 640px) {
+  .m-block-1-right {
+    width: 100%;
+    height: calc(1.5*100vw - 12rem);
+  }
+}
 .m-block-2 {
   background: linear-gradient(
       70.11deg,
@@ -828,6 +836,19 @@ body::-webkit-scrollbar {
   width: 259px;
   height: 170px;
   object-fit: cover;
+}
+@media screen and (min-width: 640px) {
+  .m-video-frame {
+    width: 580px;
+    height: 386px;
+  }
+  
+  .m-video-frame video {
+    top: 22px;
+    left: 65px;
+    width: 449px;
+    height: 294px;
+  }
 }
 .m-platforms-group-img {
   bottom: 1.875rem;

@@ -488,7 +488,7 @@
   </div>
 
   <div class="mobile-page w-full">
-    <div class="container mx-auto m-block-1 py-9 px-5 md:px-16">
+    <div class="container mx-auto m-block-1 py-9 px-5 md:px-16 lg:grid lg:grid-flow-row-dense lg:grid-cols-2">
       <div class="py-4 flex flex-col justify-between content-center">
         <div class="header flex flex-row h-9 justify-between content-center">
           <div class="flex flex-row">
@@ -541,19 +541,32 @@
             store - create – invest digital assets
           </p>
         </div>
-        <div class="mt-7 md:mt-10">
-          <button onclick="goToSocialWallet()" class="bg-light-blue font-22 rounded-2xl text-white py-2.5 px-10"
-            type="button">Download</button>
+        <div class="flex flex-row mt-7 md:mt-10">
+          <button
+            class="flex bg-light-blue font-16 rounded-2xl text-white py-2.5 px-4 font-bold mr-5 group relative inline-block duration-300"
+            type="button">
+            <img class="icon mr-2" loading="lazy" src="src/assets/launch-app.png" />Launch App
+            <span
+              class="absolute hidden group-hover:flex -left-5 -top-2 -translate-y-full w-42 px-2 py-1 bg-gray-700 rounded-lg text-center text-white text-sm after:content-[''] after:absolute after:left-1/2 after:top-[100%] after:-translate-x-1/2 after:border-8 after:border-x-transparent after:border-b-transparent after:border-t-gray-700">Coming
+              Soon</span>
+            </a>
+          </button>
+          <button onclick="goToSocialWallet()"
+            class="flex bg-button text-light-blue font-16 rounded-2xl py-2.5 px-4 font-bold" type="button">
+            <img class="icon mr-2" loading="lazy" src="src/assets/download-icon.png" />Download
+          </button>
         </div>
       </div>
-      <div class="m-block-1-right mt-16">
+      <div class="mt-16 h-full">
+        <div class="m-block-1-right">
         <img class="phone-img display-transation from-right" loading="lazy" src="src/assets/block-1/phone.png" />
         <img class="tether-img display-transation from-top" loading="lazy" src="src/assets/block-1/tether.png" />
         <img class="chainlink-img display-transation from-left" loading="lazy" src="src/assets/block-1/chainlink.png" />
         <img class="card-img display-transation from-left" loading="lazy" src="src/assets/block-1/card.png" />
         <img class="bitcoin-img display-transation from-right" loading="lazy" src="src/assets/block-1/bitcoin.png" />
-        <img class="iphone-14-pro-img display-transation from-bottom-top" loading="lazy"
+        <img class="iphone-14-pro-img display-transation from-bottom-top h-full" loading="lazy"
           src="src/assets/block-1/m-iphone-14-pro.png" />
+          </div>
       </div>
     </div>
     <div class="m-block-2 flex mt-16">
@@ -590,8 +603,8 @@
     <div class="m-block-3">
       <div class="container pt-16 mx-auto py-9 px-5 md:px-9">
         <div class="flex flex-col justify-between">
-          <h1 class="font-28 font-bold text-dark-blue">Manage Digital Assets Made Easy</h1>
-          <p class="font-16 mt-4 font-medium text-grey-60">Galaxy Wallet offers users, particularly non-crypto
+          <h1 class="sm:text-4xl font-28 font-bold text-dark-blue">Manage Digital Assets Made Easy</h1>
+          <p class="sm:text-2xl font-16 mt-4 font-medium text-grey-60">Galaxy Wallet offers users, particularly non-crypto
             users, an intuitive, all-encompassing solution that goes beyond a standard wallet with basic
             coins/NFTs storage and transfer features.</p>
           <div class="grid grid-cols-3 gap-4 mt-14">
@@ -605,7 +618,7 @@
               <div class="complete-bar"></div>
             </div>
           </div>
-          <div class="font-28 text-dark-blue">
+          <div class="sm:text-4xl font-28 text-dark-blue">
             <div class="flex flex-col block-2-m-slide">
               <div class="mt-5 process-title">Store digital assets all in one wallet</div>
               <div class="step-img mt-12">
@@ -631,16 +644,15 @@
     <div class="m-block-4">
       <div class="container content-center mx-auto py-9 px-5 md:px-9">
         <div class="video-des justify-center text-dark-blue">
-          <h1 class="font-28 font-bold">
-            Become a <span class="text-light-blue">Better</span><br />
-            <span class="text-light-blue">Investor</span> today
+          <h1 class="sm:text-4xl font-28 font-bold">
+            Become a <span class="text-light-blue">Better Investor</span> today
           </h1>
-          <p class="font-16 font-medium mt-8">
+          <p class="sm:text-2xl font-16 font-medium mt-8">
             What you need to know about Investing before the get-go. Your Financial Journey starts from
             here today
           </p>
         </div>
-        <div class="m-video-frame mt-16">
+        <div class="m-video-frame mt-16 mx-auto">
           <img loading="lazy" src="src/assets/block-4/m-frame-video.png" />
           <video controls="hidden" autoplay muted loop playsinline style="pointer-events: none">
             <source src="src/assets/block-4/video.mp4" type="video/mp4" />
@@ -651,12 +663,12 @@
     </div>
     <div class="block-5 text-dark-blue">
       <div class="container mx-auto py-9 px-5 md:px-9">
-        <h1 class="font-28 font-bold">Unlock all of Social Web 3.0 today</h1>
-        <p class="font-16 font-semibold text-grey-40 mt-5">
+        <h1 class="sm:text-4xl font-28 font-bold">Unlock all of Social Web 3.0 today</h1>
+        <p class="sm:text-2xl font-16 font-semibold text-grey-40 mt-5">
           Share your thoughts, make new friends, follow friends, and find investment opportunities
           together.
         </p>
-        <div class="mt-16 bg-block-4 font-16">
+        <div class="mt-16 bg-block-4 font-16 sm:text-2xl">
           <h1>
             <span class="text-light-blue">Unique</span><br />
             Digital Avatar
@@ -715,7 +727,7 @@
             <img class="logo-img mr-2" loading="lazy" src="src/assets/logo.png" />
             <img class="brand-name-img mt-1" loading="lazy" src="src/assets/brand-name.png" />
           </div>
-          <div class="font-28 font-bold text-dark-blue mt-5">Try Social Wallet in Web 3</div>
+          <div class="sm:text-4xl font-28 font-bold text-dark-blue mt-5">Try Social Wallet in Web 3</div>
           <div class="mt-5">
             <button class="w-24 h-10 group relative inline-block duration-300" type="button">
               <img loading="lazy" src="src/assets/block-6/android-store.png" />
@@ -741,7 +753,7 @@
     <div class="block-7">
       <div class="container py-14 px-5">
         <div class="bl7-content flex flex-col justify-center">
-          <h1 class="font-28 h-32 font-normal px-5">
+          <h1 class="sm:text-4xl font-28 h-32 font-normal px-5">
             <span class="text-light-blue font-bold">Coming next</span><br />
             An one-stop-shop for Defi
           </h1>
@@ -750,19 +762,19 @@
               <div class="item-content round-30 block-7-m-slide">
                 <img class="py-2 px-16" loading="lazy" src="src/assets/block-7/rocket.png" />
                 <div
-                  class="bg-dark-blue round-30 font-28 font-bold text-white py-14 xl:px-16 px-6 text-center justify-center">
+                  class="sm:text-4xl bg-dark-blue round-30 font-28 font-bold text-white py-14 xl:px-16 px-6 text-center justify-center">
                   Crowd Funding<br />Platform</div>
               </div>
               <div class="item-content round-30 block-7-m-slide">
                 <img class="py-2 px-16" loading="lazy" src="src/assets/block-7/locker.png" />
                 <div
-                  class="bg-dark-blue round-30 font-28 font-bold text-white py-14 xl:px-16 px-6 text-center justify-center">
+                  class="sm:text-4xl bg-dark-blue round-30 font-28 font-bold text-white py-14 xl:px-16 px-6 text-center justify-center">
                   DeFi<br />Banking</div>
               </div>
               <div class="item-content round-30 block-7-m-slide">
                 <img class="py-2 px-16" loading="lazy" src="src/assets/block-7/bag.png" />
                 <div
-                  class="bg-dark-blue round-30 font-28 font-bold text-white py-14 xl:px-16 px-6 text-center justify-center">
+                  class="sm:text-4xl bg-dark-blue round-30 font-28 font-bold text-white py-14 xl:px-16 px-6 text-center justify-center">
                   Marketplace<br />and Beyond</div>
               </div>
             </div>
@@ -788,7 +800,7 @@
           <img class="brand-name-img mt-1" loading="lazy" src="src/assets/brand-name.png" />
         </div>
         <div class="grid grid-flow-row-dense md:grid-cols-2 grid-cols-1 gap-14 mt-14">
-          <div class="flex flex-col text-dark-blue font-16 mr-7">
+          <div class="sm:text-2xl flex flex-col text-dark-blue font-16 mr-7">
             <h1 class="text-link font-bold text-light-blue mb-5">Galaxy Finance</h1>
             <a href="https://galaxyfinance.io/" alt="Galaxy Web">Galaxy Web</a>
             <a href="#" alt="Galaxy IOS" class="group relative inline-block duration-300">
@@ -820,7 +832,7 @@
               </span>
             </a>
           </div>
-          <div class="flex flex-col text-dark-blue font-16 mr-7">
+          <div class="sm:text-2xl flex flex-col text-dark-blue font-16 mr-7">
             <h1 class="text-link font-bold text-light-blue mb-5">Company</h1>
             <a href="#" alt="Galaxy IOS" class="group relative inline-block duration-300">
               Brand Assets
@@ -835,14 +847,14 @@
                 Soon</span>
             </a>
           </div>
-          <div class="flex flex-col text-dark-blue font-16 mr-7">
+          <div class="sm:text-2xl flex flex-col text-dark-blue font-16 mr-7">
             <h1 class="text-link font-bold text-light-blue mb-5">Legal</h1>
             <a href="#" alt="Privacy" onclick="openPrivacyModal();return false;">Privacy</button>
               <a href="#" alt="Terms" onclick="openTermsModal();return false;">Terms</a>
               <a href="#" alt="Cookie Policy" onclick="openCookiesModal();return false;">Cookie Policy</a>
               <a href="#" alt="CCPA" onclick="openCCPAModal();return false;">CCPA</a>
           </div>
-          <div class="flex flex-col text-dark-blue font-16 mr-7">
+          <div class="sm:text-2xl flex flex-col text-dark-blue font-16 mr-7">
             <h1 class="text-link font-bold text-light-blue mb-5">Support</h1>
             <a href="#" alt="Help Center" class="group relative inline-block duration-300">
               Help Center
