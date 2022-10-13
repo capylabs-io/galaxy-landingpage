@@ -23,6 +23,10 @@ function goToFooter() {
   document.getElementById("footer").scrollIntoView({ behavior: "smooth" });
 }
 
+function goToSocialWallet() {
+  document.getElementById("social-wallet-web3").scrollIntoView({ behavior: "smooth" });
+}
+
 window.onclick = function (event) {
   if (event.target.id != "menu-button") {
     var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -46,30 +50,14 @@ window.onload = (event) => {
   });
   // handleInBlock3(fullPageObjectArr);
   if (window.innerWidth < 1179) {
+    clearTimeout(timer);
     loadingBlock3(0);
   }
 };
 
 window.addEventListener("scroll", function (event) {
-  if (window.innerWidth > 1179) {
-    let triggerForBlock2 = Array.from(fullPageObject)[1].scrollHeight + 0.75 * window.innerHeight;
-    if (
-      window.screenY <= triggerForBlock2 &&
-      window.screenY >= Array.from(fullPageObject)[1].scrollHeight * 0.75
-    ) {
-      debounce(handleScroll, 500);
-      countTrigger = 2;
-      fullPage[1].scrollIntoView({ behavior: "smooth" });
-    }
-  }
   callDisplayTransaction(tranactionItems);
 });
-function debounce(method, delay) {
-  clearTimeout(method._tId);
-  method._tId = setTimeout(function () {
-    method();
-  }, delay);
-}
 function callDisplayTransaction(tranactionItems) {
   Array.from(tranactionItems).forEach((item) => {
     let itemTop = item.getBoundingClientRect().top;
@@ -195,16 +183,8 @@ function handleInBlock2(fullPage) {
       fullPage[1].scrollIntoView();
     } else if (countTrigger > 2) {
       countTrigger = 3;
-      var triggerBottom = (window.innerHeight / 5) * 4;
+      clearTimeout(timer);
       loadingBlock3(0);
-      Array.from(block3Item).forEach((item) => {
-        if (!item.classList.contains("process-active")) {
-          if (item.getBoundingClientRect().top < triggerBottom) {
-            item.classList.add("process-active");
-            // loadingBlock3(0);
-          }
-        }
-      });
     }
   });
 }
@@ -220,3 +200,39 @@ var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggl
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new Tooltip(tooltipTriggerEl);
 });
+function openPrivacyModal() {
+  document.getElementById('privacyModal').style.display='block';
+  document.body.style.overflowY = "hidden";
+}
+
+function closePrivacyModal() {
+  document.getElementById('privacyModal').style.display='none'
+  document.body.style.overflowY = "auto";
+}
+
+function openTermsModal() {
+  document.getElementById('termsModal').style.display='block';
+  document.body.style.overflowY = "hidden";
+}
+function closeTermsModal() {
+  document.getElementById('termsModal').style.display='none'
+  document.body.style.overflowY = "auto";
+}
+function openCookiesModal() {
+  document.getElementById('cookiesModal').style.display='block';
+  document.body.style.overflowY = "hidden";
+}
+
+function closeCookiesModal() {
+  document.getElementById('cookiesModal').style.display='none'
+  document.body.style.overflowY = "auto";
+}
+
+function openCCPAModal() {
+  document.getElementById('').style.display='block';
+  document.body.style.overflowY = "hidden";
+}
+function closeCCPAModal() {
+  document.getElementById('').style.display='none'
+  document.body.style.overflowY = "auto";
+}
