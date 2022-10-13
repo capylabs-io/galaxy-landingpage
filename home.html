@@ -42,7 +42,7 @@
                       class="absolute hidden group-hover:flex -left-5 -top-2 -translate-y-full w-42 px-2 py-1 bg-gray-700 rounded-lg text-center text-white text-sm after:content-[''] after:absolute after:left-1/2 after:top-[100%] after:-translate-x-1/2 after:border-8 after:border-x-transparent after:border-b-transparent after:border-t-gray-700">Coming
                       Soon</span>
                   </a>
-                  <a href="#" class="block px-4 py-2 text-xl font-light menu-item" role="menuitem" tabindex="-1"
+                  <a class="block px-4 py-2 text-xl font-light menu-item cursor-pointer" role="menuitem" tabindex="-1"
                     id="menu-item-2" onclick="goToSocialWallet()">Download</a>
                   <a href="#"
                     class="block px-4 py-2 text-xl font-light menu-item group relative inline-block duration-300"
@@ -52,7 +52,7 @@
                       class="absolute hidden group-hover:flex -left-5 -top-2 -translate-y-full w-42 px-2 py-1 bg-gray-700 rounded-lg text-center text-white text-sm after:content-[''] after:absolute after:left-1/2 after:top-[100%] after:-translate-x-1/2 after:border-8 after:border-x-transparent after:border-b-transparent after:border-t-gray-700">Coming
                       Soon</span>
                   </a>
-                  <a onclick="goToFooter()" class="block px-4 py-2 text-xl font-light menu-item" role="menuitem"
+                  <a onclick="goToFooter()" class="block px-4 py-2 text-xl font-light menu-item cursor-pointer" role="menuitem"
                     tabindex="-1" id="menu-item-2">Sitemap</a>
                 </div>
               </div>
@@ -316,7 +316,7 @@
       </div>
     </div>
     <div class="block-6">
-      <div class="container p-24 mx-auto">
+      <div class="container p-24 mx-auto" id="social-wallet-web3">
         <div class="iphone-pro display-transation from-bottom">
           <img loading="lazy" class="z-10 animation-flying" src="src/assets/block-6/iphone-14-pro.png" />
         </div>
@@ -325,14 +325,22 @@
             <img class="logo-img mr-2" loading="lazy" src="src/assets/logo.png" />
             <img class="brand-name-img mt-1" loading="lazy" src="src/assets/brand-name.png" />
           </div>
-          <div class="text-4xl xl:text-5xl font-bold text-dark-blue mt-30" id="social-wallet-web3">Try Social Wallet in
+          <div class="text-4xl xl:text-5xl font-bold text-dark-blue mt-30">Try Social Wallet in
             Web 3</div>
           <div class="mt-16">
-            <button class="w-36 h-10" type="button">
-              <img loading="lazy" src="src/assets/block-6/android-store.png" />
+            <button class="w-36 h-10 group relative inline-block duration-300" type="button">
+              <img loading="lazy" src="src/assets/block-6/android-store.png"/>
+              <span
+                      class="absolute hidden group-hover:flex -left-5 -top-2 -translate-y-full w-48 px-2 py-1 bg-gray-700 rounded-lg text-center text-white text-sm after:content-[''] after:absolute after:left-1/2 after:top-[100%] after:-translate-x-1/2 after:border-8 after:border-x-transparent after:border-b-transparent after:border-t-gray-700">
+                      The GalaxyFi app will be available on IOS devices this quarter
+                    </span>
             </button>
-            <button class="w-36 h-10" type="button">
-              <img loading="lazy" src="src/assets/block-6/apple-store.png" />
+            <button class="w-36 h-10 group relative inline-block duration-300" type="button">
+              <img loading="lazy" src="src/assets/block-6/apple-store.png"/>
+              <span
+                      class="absolute hidden group-hover:flex -left-5 -top-2 -translate-y-full w-48 px-2 py-1 bg-gray-700 rounded-lg text-center text-white text-sm after:content-[''] after:absolute after:left-1/2 after:top-[100%] after:-translate-x-1/2 after:border-8 after:border-x-transparent after:border-b-transparent after:border-t-gray-700">
+                      The GalaxyFi app will be available on Android devices this quarter
+                    </span>
             </button>
           </div>
         </div>
