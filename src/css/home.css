@@ -36,7 +36,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1180px) {
   .pc-page {
     display: block;
   }
@@ -669,7 +669,7 @@ body::-webkit-scrollbar {
   padding-left: 35%;
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1179px) {
   .bl6-content {
     padding-left: 42%;
   }
