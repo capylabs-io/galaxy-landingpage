@@ -852,6 +852,7 @@ body::-webkit-scrollbar {
 }
 .modal-header{
   position: relative;
+  text-align: center;
 }
 .modal-container{
   height: calc(100% - 69px) !important;
