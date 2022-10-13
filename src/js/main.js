@@ -19,6 +19,12 @@ function toggleMenu() {
   if (dropdownMenu.classList.contains("show-menu")) dropdownMenu.classList.remove("show-menu");
   else dropdownMenu.classList.add("show-menu");
 }
+//menu
+function toggleMenuMobile() {
+  var dropdownMenu = document.getElementById("m-dropdown-menu");
+  if (dropdownMenu.classList.contains("show-menu")) dropdownMenu.classList.remove("show-menu");
+  else dropdownMenu.classList.add("show-menu");
+}
 
 function goToFooter() {
   document.getElementById("footer").scrollIntoView({ behavior: "smooth" });
