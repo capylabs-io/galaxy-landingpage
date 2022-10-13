@@ -194,3 +194,13 @@ function preventScroll(e) {
   e.stopPropagation();
   return false;
 }
+
+function openPricyModal() {
+  document.getElementById('privacyModal').style.display='block';
+  document.body.style.overflowY = "hidden";
+}
+
+function closePricyModal() {
+  document.getElementById('privacyModal').style.display='none'
+  document.body.style.overflowY = "auto";
+}
