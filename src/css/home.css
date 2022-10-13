@@ -938,7 +938,7 @@ body::-webkit-scrollbar {
 .close-button {
   cursor: pointer;
   position: absolute;
-  top: 0px;
+  top: 8px;
   right: 24px;
 }
 .straight-line {
