@@ -23,6 +23,10 @@ function goToFooter() {
   document.getElementById("footer").scrollIntoView({ behavior: "smooth" });
 }
 
+function goToSocialWallet() {
+  document.getElementById("social-wallet-web3").scrollIntoView({ behavior: "smooth" });
+}
+
 window.onclick = function (event) {
   if (event.target.id != "menu-button") {
     var dropdowns = document.getElementsByClassName("dropdown-content");
