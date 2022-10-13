@@ -196,11 +196,12 @@ function handleInBlock2(fullPage) {
     } else if (countTrigger > 2) {
       countTrigger = 3;
       var triggerBottom = (window.innerHeight / 5) * 4;
+      loadingBlock3(0);
       Array.from(block3Item).forEach((item) => {
         if (!item.classList.contains("process-active")) {
           if (item.getBoundingClientRect().top < triggerBottom) {
             item.classList.add("process-active");
-            loadingBlock3(0);
+            // loadingBlock3(0);
           }
         }
       });
