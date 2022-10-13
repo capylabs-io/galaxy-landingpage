@@ -883,7 +883,7 @@ body::-webkit-scrollbar {
       rgba(247, 247, 221, 0.4) 93.26%
     ),
     #ffffff;
-  height: 100vh;
+  height: auto;
   min-height: 600px;
   width: 100%;
   overflow: hidden;
