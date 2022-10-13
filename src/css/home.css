@@ -441,7 +441,7 @@ body::-webkit-scrollbar {
 .video-frame video {
   position: absolute;
   width: 716px;
-  height: 541px;
+  height: 542px;
   object-fit: cover;
   top: 36px;
   right: 0;
