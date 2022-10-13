@@ -383,7 +383,7 @@
   opacity: 0;
   object-position: right;
 }
-.show.move-crop-zone-left {
+.show .move-crop-zone-left {
   animation: move-crop-zone-left 2s forwards;
 }
 .apple-watch-block{
@@ -391,9 +391,9 @@
 }
 .move-crop-zone-top {
   opacity: 0;
-  object-position: 0px 340px;
+  object-position: 0px 640px;
 }
-.show.move-crop-zone-top {
+.show .move-crop-zone-top {
   animation: move-crop-zone-top 1s forwards;
 }
 .move-crop-zone-watch {
