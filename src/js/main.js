@@ -46,6 +46,7 @@ window.onload = (event) => {
   });
   // handleInBlock3(fullPageObjectArr);
   if (window.innerWidth < 1179) {
+    clearTimeout(timer);
     loadingBlock3(0);
   }
 };
@@ -79,6 +80,7 @@ function onClickLoadBlock3(index) {
 async function loadingBlock3(index) {
   let processBar;
   let activeElement;
+  timer.clearTimeout();
   if (window.innerWidth >= 1180) {
     processBar = Array.from(document.getElementsByClassName("slide"));
     activeElement = Array.from(document.getElementsByClassName("slide active"));
@@ -178,6 +180,7 @@ function handleInBlock2(fullPage) {
       fullPage[1].scrollIntoView();
     } else if (countTrigger > 2) {
       countTrigger = 3;
+      timer.clearTimeout();
       loadingBlock3(0);
     }
   });
