@@ -80,7 +80,6 @@ function onClickLoadBlock3(index) {
 async function loadingBlock3(index) {
   let processBar;
   let activeElement;
-  timer.clearTimeout();
   if (window.innerWidth >= 1180) {
     processBar = Array.from(document.getElementsByClassName("slide"));
     activeElement = Array.from(document.getElementsByClassName("slide active"));
