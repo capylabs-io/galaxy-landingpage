@@ -1,6 +1,5 @@
 const tranactionBlock1 = document.getElementsByClassName("display-transation-1");
 const tranactionItems = document.getElementsByClassName("display-transation");
-const block3Item = document.getElementsByClassName("block-3");
 const trgger1Class = document.getElementsByClassName("trigger-1");
 const trgger2Class = document.getElementsByClassName("trigger-2");
 const trgger3Class = document.getElementsByClassName("trigger-3");
@@ -19,7 +18,7 @@ function toggleMenu() {
   if (dropdownMenu.classList.contains("show-menu")) dropdownMenu.classList.remove("show-menu");
   else dropdownMenu.classList.add("show-menu");
 }
-//menu
+//menu molbie
 function toggleMenuMobile() {
   var dropdownMenu = document.getElementById("m-dropdown-menu");
   if (dropdownMenu.classList.contains("show-menu")) dropdownMenu.classList.remove("show-menu");
@@ -52,9 +51,6 @@ window.onload = (event) => {
   callDisplayTransaction(tranactionBlock1);
   handleInBlock1(fullPageObjectArr);
   handleInBlock2(fullPageObjectArr);
-  fullPageObjectArr[3].addEventListener("scroll", function (event) {
-    callDisplayTransaction(tranactionItems);
-  });
   // handleInBlock3(fullPageObjectArr);
   if (window.innerWidth < 1179) {
     loadingBlock3(0);

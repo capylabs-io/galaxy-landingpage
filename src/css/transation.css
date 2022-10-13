@@ -84,7 +84,7 @@
   animation: tran-opacity-reverse 1s forwards;
 }
 .active .step-img {
-  animation: tran-opacity 0.4s forwards;
+  animation: tran-opacity 0.8s forwards;
 }
 @media screen and (max-width: 1179px) {
   .process-title {
@@ -92,7 +92,7 @@
     animation: tran-opacity-reverse 1s forwards;
   }
   .step-img {
-    display: none;
+    overflow: hidden;
     animation: tran-opacity-reverse 1s forwards;
   }
   .active .process-title {
@@ -100,7 +100,7 @@
     animation: tran-opacity 1s forwards;
   }
   .active .step-img {
-    display: block;
+    overflow: auto;
     animation: tran-opacity 1s forwards;
   }
   .item-content {
