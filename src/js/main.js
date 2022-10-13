@@ -11,6 +11,8 @@ const triggerBottom = (window.innerHeight / 5) * 4;
 var timer;
 var countTrigger = 0;
 var isUserScrolling = false;
+var triggerForBlock2Top;
+var triggerForBlock2Bottom;
 
 //menu
 function toggleMenu() {
@@ -37,6 +39,7 @@ window.onclick = function (event) {
 };
 
 window.onload = (event) => {
+  console.log("load")
   const fullPageObjectArr = Array.from(fullPageObject);
   callDisplayTransaction(tranactionBlock1);
   handleInBlock1(fullPageObjectArr);
@@ -44,22 +47,13 @@ window.onload = (event) => {
   fullPageObjectArr[3].addEventListener("scroll", function (event) {
     callDisplayTransaction(tranactionItems);
   });
-  // handleInBlock3(fullPageObjectArr);
-  if (window.innerWidth < 1179) {
-    loadingBlock3(0);
-  }
-  
+  loadingBlock3(0);
+  handleInBlock3(fullPageObjectArr);
 };
 
 window.addEventListener("scroll", function (event) {
-  if (window.innerWidth > 1179) {
-  let triggerForBlock2 = Array.from(fullPageObject)[1].scrollHeight + 0.75*window.innerHeight;
-    if (window.screenY <= triggerForBlock2 && window.screenY >= Array.from(fullPageObject)[1].scrollHeight*0.75) {
-      debounce(handleScroll, 500);
-      countTrigger = 2;
-      fullPage[1].scrollIntoView({ behavior: "smooth" });
-    }
-  }
+  triggerForBlock2 = Array.from(fullPageObject)[1].scrollHeight + 0.75*window.innerHeight;
+  triggerForBlock2Bottom = Array.from(fullPageObject)[1].scrollHeight*1.25;
   callDisplayTransaction(tranactionItems);
 });
 function debounce(method, delay) {
@@ -136,6 +130,13 @@ function handleInBlock1(fullPage) {
 
 function handleInBlock2(fullPage) {
   fullPage[1].addEventListener("wheel", function (e) {
+    console.log(window.pageYOffset + " " + triggerForBlock2 + " "+triggerForBlock2Bottom)
+    if (e.deltaY < 0 && window.pageYOffset <= triggerForBlock2 && window.pageYOffset >= triggerForBlock2Bottom) {
+      console.log("ok");
+      countTrigger = 2;
+      fullPage[1].scrollIntoView({ behavior: "smooth" });
+      preventScroll(e);
+    }
     if (countTrigger <= 2) preventScroll(e);
     if (e.deltaY > 0 && !isUserScrolling) {
       isUserScrolling = true;
@@ -151,6 +152,7 @@ function handleInBlock2(fullPage) {
       }, 800);
       // if (countTrigger <= -2) preventScroll(e);
     }
+    console.log(countTrigger)
     if (countTrigger <= -1) {
       countTrigger = -2;
       fullPage[0].scrollIntoView({ behavior: "smooth" });
@@ -195,6 +197,17 @@ function handleInBlock2(fullPage) {
       });
     }
   });
+}
+
+function handleInBlock3(fullPage) {
+  fullPage[2].addEventListener("wheel", function (e) {
+    if (e.deltaY < 0 && window.pageYOffset <= triggerForBlock2 && window.pageYOffset >= triggerForBlock2Bottom) {
+      console.log("ok111111");
+      countTrigger = 2;
+      fullPage[1].scrollIntoView({ behavior: "smooth" });
+      preventScroll(e);
+    }
+  })
 }
 
 function preventScroll(e) {
