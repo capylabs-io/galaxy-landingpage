@@ -195,12 +195,39 @@ function preventScroll(e) {
   return false;
 }
 
-function openPricyModal() {
+function openPrivacyModal() {
   document.getElementById('privacyModal').style.display='block';
   document.body.style.overflowY = "hidden";
 }
 
-function closePricyModal() {
+function closePrivacyModal() {
   document.getElementById('privacyModal').style.display='none'
+  document.body.style.overflowY = "auto";
+}
+
+function openTermsModal() {
+  document.getElementById('termsModal').style.display='block';
+  document.body.style.overflowY = "hidden";
+}
+function closeTermsModal() {
+  document.getElementById('termsModal').style.display='none'
+  document.body.style.overflowY = "auto";
+}
+function openCookiesModal() {
+  document.getElementById('cookiesModal').style.display='block';
+  document.body.style.overflowY = "hidden";
+}
+
+function closeCookiesModal() {
+  document.getElementById('cookiesModal').style.display='none'
+  document.body.style.overflowY = "auto";
+}
+
+function openCCPAModal() {
+  document.getElementById('').style.display='block';
+  document.body.style.overflowY = "hidden";
+}
+function closeCCPAModal() {
+  document.getElementById('').style.display='none'
   document.body.style.overflowY = "auto";
 }

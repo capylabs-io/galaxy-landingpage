@@ -710,14 +710,12 @@ body::-webkit-scrollbar {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0,0,0,0.4);
-  overflow: hidden;
   z-index: 100;
 }
 .modal-content {
   position: absolute;
   background-color: #ffffff;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: auto;
   top: 10%;
   left: 15%;
   width: 70%;
