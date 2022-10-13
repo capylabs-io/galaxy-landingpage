@@ -869,3 +869,6 @@ body::-webkit-scrollbar {
   height: 1px;
   background-color: #0a083a;
 }
+.cursor-pointer{
+  cursor: pointer;
+}
