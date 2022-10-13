@@ -36,8 +36,9 @@
                     role="menuitem" tabindex="-1" id="menu-item-0">Website</a>
                   <a href="#" class="block px-4 py-2 text-xl font-light menu-item" role="menuitem" tabindex="-1"
                     id="menu-item-1">Launch App</a>
-                  <a href="#" class="block px-4 py-2 text-xl font-light menu-item" role="menuitem" tabindex="-1"
-                    id="menu-item-2">Download</a>
+                  <button id="menu-item-2" onclick="goToSocialWallet()" class="block px-4 py-2 text-xl font-light menu-item" tabindex="-1">
+                    Download
+                  </button>
                   <a href="#" class="block px-4 py-2 text-xl font-light menu-item" role="menuitem" tabindex="-1"
                     id="menu-item-2">Deck</a>
                   <a onclick="goToFooter()" class="block px-4 py-2 text-xl font-light menu-item" role="menuitem"
@@ -62,7 +63,7 @@
             <button class="flex bg-light-blue font-22 rounded-2xl text-white py-2.5 px-4 font-bold mr-5" type="button">
               <img class="icon mr-2" loading="lazy" src="src/assets/launch-app.png" />Launch App
             </button>
-            <button class="flex bg-button text-light-blue font-22 rounded-2xl py-2.5 px-4 font-bold" type="button">
+            <button onclick="goToSocialWallet()" class="flex bg-button text-light-blue font-22 rounded-2xl py-2.5 px-4 font-bold" type="button">
               <img class="icon mr-2" loading="lazy" src="src/assets/download-icon.png" />Download
             </button>
           </div>
@@ -306,7 +307,7 @@
             <img class="logo-img mr-2" loading="lazy" src="src/assets/logo.png" />
             <img class="brand-name-img mt-1" loading="lazy" src="src/assets/brand-name.png" />
           </div>
-          <div class="text-4xl xl:text-5xl font-bold text-dark-blue mt-30">Try Social Wallet in Web 3</div>
+          <div class="text-4xl xl:text-5xl font-bold text-dark-blue mt-30" id="social-wallet-web3">Try Social Wallet in Web 3</div>
           <div class="mt-16">
             <button class="w-36 h-10" type="button">
               <img loading="lazy" src="src/assets/block-6/android-store.png" />
@@ -432,7 +433,7 @@
           </p>
         </div>
         <div class="mt-7">
-          <button class="bg-light-blue font-22 rounded-2xl text-white py-2.5 px-10" type="button">Download</button>
+          <button onclick="goToSocialWallet()" class="bg-light-blue font-22 rounded-2xl text-white py-2.5 px-10" type="button">Download</button>
         </div>
       </div>
       <div class="m-block-1-right mt-16">
