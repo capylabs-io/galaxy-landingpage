@@ -6,7 +6,7 @@ const trgger2Class = document.getElementsByClassName("trigger-2");
 const trgger3Class = document.getElementsByClassName("trigger-3");
 const showingTrigger = document.getElementsByClassName("trigger show");
 const fullPageObject = document.getElementsByClassName("fullpage");
-const textBlock2 = document.getElementsByClassName('text-trigger');
+const textBlock2 = document.getElementsByClassName("text-trigger");
 const triggerBottom = (window.innerHeight / 5) * 4;
 var timer;
 var countTrigger = 0;
@@ -48,13 +48,15 @@ window.onload = (event) => {
   if (window.innerWidth < 1179) {
     loadingBlock3(0);
   }
-  
 };
 
 window.addEventListener("scroll", function (event) {
   if (window.innerWidth > 1179) {
-  let triggerForBlock2 = Array.from(fullPageObject)[1].scrollHeight + 0.75*window.innerHeight;
-    if (window.screenY <= triggerForBlock2 && window.screenY >= Array.from(fullPageObject)[1].scrollHeight*0.75) {
+    let triggerForBlock2 = Array.from(fullPageObject)[1].scrollHeight + 0.75 * window.innerHeight;
+    if (
+      window.screenY <= triggerForBlock2 &&
+      window.screenY >= Array.from(fullPageObject)[1].scrollHeight * 0.75
+    ) {
       debounce(handleScroll, 500);
       countTrigger = 2;
       fullPage[1].scrollIntoView({ behavior: "smooth" });
@@ -64,8 +66,8 @@ window.addEventListener("scroll", function (event) {
 });
 function debounce(method, delay) {
   clearTimeout(method._tId);
-  method._tId= setTimeout(function(){
-      method();
+  method._tId = setTimeout(function () {
+    method();
   }, delay);
 }
 function callDisplayTransaction(tranactionItems) {
@@ -77,6 +79,14 @@ function callDisplayTransaction(tranactionItems) {
       item.classList.remove("show");
     }
   });
+}
+function iphone14Transaction() {
+  var block1Iphone = document.getElementById("block1-iphone");
+  if (block1Iphone.classList.contains("display-iphone-14-pro")) {
+    block1Iphone.classList.remove("display-iphone-14-pro");
+  }
+  void block1Iphone.offsetWidth;
+  block1Iphone.classList.add("display-iphone-14-pro");
 }
 function onClickLoadBlock3(index) {
   clearTimeout(timer);
@@ -98,14 +108,14 @@ async function loadingBlock3(index) {
   }
   // active class remove
   activeElement.forEach((item) => {
-    item.classList.remove('active');
+    item.classList.remove("active");
   });
   // add active class
-  processBar[index].classList.add('active');
+  processBar[index].classList.add("active");
   if (window.innerWidth < 1179) {
-    processBar[index+3].classList.add('active');
+    processBar[index + 3].classList.add("active");
   }
-  
+
   timer = setTimeout(function () {
     loadingBlock3(index + 1, false);
   }, 5000);
@@ -118,9 +128,9 @@ function handleInBlock1(fullPage) {
     if (event.deltaY > 0) {
       countTrigger = 0;
       fullPage[1].scrollIntoView({ behavior: "smooth" });
-      Array.from(textBlock2).forEach(item => {
-        item.classList.add('move-from-bottom');
-      })
+      Array.from(textBlock2).forEach((item) => {
+        item.classList.add("move-from-bottom");
+      });
       Array.from(tranactionBlock1).forEach((item) => {
         item.classList.remove("show");
       });
@@ -155,9 +165,10 @@ function handleInBlock2(fullPage) {
       countTrigger = -2;
       fullPage[0].scrollIntoView({ behavior: "smooth" });
       callDisplayTransaction(tranactionBlock1);
-      Array.from(textBlock2).forEach(item => {
-        item.classList.remove('move-from-bottom');
-      })
+      iphone14Transaction();
+      Array.from(textBlock2).forEach((item) => {
+        item.classList.remove("move-from-bottom");
+      });
     } else if (countTrigger == 0) {
       Array.from(showingTrigger).forEach((trigger) => {
         trigger.classList.remove("show");
