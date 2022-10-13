@@ -51,25 +51,8 @@ window.onload = (event) => {
 };
 
 window.addEventListener("scroll", function (event) {
-  if (window.innerWidth > 1179) {
-    let triggerForBlock2 = Array.from(fullPageObject)[1].scrollHeight + 0.75 * window.innerHeight;
-    if (
-      window.screenY <= triggerForBlock2 &&
-      window.screenY >= Array.from(fullPageObject)[1].scrollHeight * 0.75
-    ) {
-      debounce(handleScroll, 500);
-      countTrigger = 2;
-      fullPage[1].scrollIntoView({ behavior: "smooth" });
-    }
-  }
   callDisplayTransaction(tranactionItems);
 });
-function debounce(method, delay) {
-  clearTimeout(method._tId);
-  method._tId = setTimeout(function () {
-    method();
-  }, delay);
-}
 function callDisplayTransaction(tranactionItems) {
   Array.from(tranactionItems).forEach((item) => {
     let itemTop = item.getBoundingClientRect().top;
@@ -195,16 +178,7 @@ function handleInBlock2(fullPage) {
       fullPage[1].scrollIntoView();
     } else if (countTrigger > 2) {
       countTrigger = 3;
-      var triggerBottom = (window.innerHeight / 5) * 4;
       loadingBlock3(0);
-      Array.from(block3Item).forEach((item) => {
-        if (!item.classList.contains("process-active")) {
-          if (item.getBoundingClientRect().top < triggerBottom) {
-            item.classList.add("process-active");
-            // loadingBlock3(0);
-          }
-        }
-      });
     }
   });
 }
