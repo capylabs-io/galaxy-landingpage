@@ -79,7 +79,7 @@ body::-webkit-scrollbar {
   width: 100%;
   height: auto;
   max-height: 100%;
-  top: 0;
+  bottom: 0;
   left: 0;
   border-radius: 0 0 0 30px;
 }
