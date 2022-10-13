@@ -92,7 +92,7 @@
     animation: tran-opacity-reverse 1s forwards;
   }
   .step-img {
-    overflow: hidden;
+    display: none;
     animation: tran-opacity-reverse 1s forwards;
   }
   .active .process-title {
@@ -100,7 +100,7 @@
     animation: tran-opacity 1s forwards;
   }
   .active .step-img {
-    overflow: auto;
+    display: block;
     animation: tran-opacity 1s forwards;
   }
   .item-content {

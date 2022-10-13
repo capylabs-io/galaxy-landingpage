@@ -47,12 +47,13 @@ window.onclick = function (event) {
 };
 
 window.onload = (event) => {
-  const fullPageObjectArr = Array.from(fullPageObject);
   callDisplayTransaction(tranactionBlock1);
-  handleInBlock1(fullPageObjectArr);
-  handleInBlock2(fullPageObjectArr);
-  // handleInBlock3(fullPageObjectArr);
-  if (window.innerWidth < 1179) {
+  if (window.innerWidth >= 1180) {
+    const fullPageObjectArr = Array.from(fullPageObject);
+    handleInBlock1(fullPageObjectArr);
+    handleInBlock2(fullPageObjectArr);
+    // handleInBlock3(fullPageObjectArr);
+  } else {
     loadingBlock3(0);
     loadingBlock7(0)
   }
