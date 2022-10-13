@@ -229,10 +229,10 @@ function closeCookiesModal() {
 }
 
 function openCCPAModal() {
-  document.getElementById('').style.display='block';
+  document.getElementById('ccpaModal').style.display='block';
   document.body.style.overflowY = "hidden";
 }
 function closeCCPAModal() {
-  document.getElementById('').style.display='none'
+  document.getElementById('ccpaModal').style.display='none'
   document.body.style.overflowY = "auto";
 }
