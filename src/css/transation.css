@@ -103,6 +103,14 @@
     display: block;
     animation: tran-opacity 1s forwards;
   }
+  .item-content {
+    display: none;
+    animation: tran-opacity-reverse 1s forwards;
+  }
+  .active.item-content {
+    display: block;
+    animation: tran-opacity 1s forwards;
+  }
 }
 .delay-animation{
   animation-delay: 1s;
@@ -480,11 +488,11 @@
   }
   90% {
     opacity: 1;
-    object-position: 32px;
+    object-position: 80px;
   }
   100% {
     opacity: 1;
-    object-position: 0px;
+    object-position: -100px;
   }
 }
 

@@ -9,6 +9,7 @@ const fullPageObject = document.getElementsByClassName("fullpage");
 const textBlock2 = document.getElementsByClassName("text-trigger");
 const triggerBottom = (window.innerHeight / 5) * 4;
 var timer;
+var timer2;
 var countTrigger = 0;
 var isUserScrolling = false;
 
@@ -50,8 +51,8 @@ window.onload = (event) => {
   });
   // handleInBlock3(fullPageObjectArr);
   if (window.innerWidth < 1179) {
-    clearTimeout(timer);
     loadingBlock3(0);
+    loadingBlock7(0)
   }
 };
 
@@ -235,4 +236,27 @@ function openCCPAModal() {
 function closeCCPAModal() {
   document.getElementById('ccpaModal').style.display='none'
   document.body.style.overflowY = "auto";
+}
+
+function loadingBlock7(index) {
+  let processBar = Array.from(document.getElementsByClassName("block-7-m-slide"));;
+  let activeElement = Array.from(document.getElementsByClassName("block-7-m-slide active"));
+  if (index >= 3) {
+    index = 0;
+  }
+  // active class remove
+  activeElement.forEach((item) => {
+    item.classList.remove("active");
+  });
+  // add active class
+  processBar[index].classList.add("active");
+  processBar[index + 3].classList.add("active");
+
+  timer2 = setTimeout(function () {
+    loadingBlock7(index + 1);
+  }, 5000);
+}
+function onClickLoadBlock7(index) {
+  clearTimeout(timer2);
+  loadingBlock7(index);
 }
