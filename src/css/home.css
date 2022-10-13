@@ -765,6 +765,11 @@ body::-webkit-scrollbar {
   border-radius: 30px;
   min-height: 600px;
 }
+.m-block-7 {
+  background-image: url("../assets/block-4/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 @media screen and (max-width: 1179px) {
   .phone-img {
     position: absolute;
@@ -834,7 +839,7 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 1023px) and (min-width: 640px) {
   .m-block-1-right {
     width: 100%;
-    height: calc(1.5*100vw - 12rem);
+    height: calc(1.5 * 100vw - 12rem);
   }
 }
 @media screen and (min-width: 640px) {
@@ -842,7 +847,7 @@ body::-webkit-scrollbar {
     width: 580px;
     height: 386px;
   }
-  
+
   .m-video-frame video {
     top: 22px;
     left: 65px;
@@ -850,7 +855,7 @@ body::-webkit-scrollbar {
     height: 294px;
   }
 }
-@media screen and (max-width:640px) {
+@media screen and (max-width: 640px) {
   .m-platforms-group-img {
     height: 179px;
     width: 100%;
