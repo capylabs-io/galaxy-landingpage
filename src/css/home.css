@@ -669,7 +669,7 @@ body::-webkit-scrollbar {
   padding-left: 35%;
 }
 
-@media screen and (max-width: 1179px) {
+@media screen and (max-width: 1279px) {
   .bl6-content {
     padding-left: 42%;
   }
