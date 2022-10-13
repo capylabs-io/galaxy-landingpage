@@ -47,7 +47,9 @@ window.onclick = function (event) {
 };
 
 window.onload = (event) => {
-  callDisplayTransaction(tranactionBlock1);
+  Array.from(tranactionBlock1).forEach((item) => {
+      item.classList.add("show");
+  });
   if (window.innerWidth >= 1180) {
     const fullPageObjectArr = Array.from(fullPageObject);
     handleInBlock1(fullPageObjectArr);
@@ -55,7 +57,7 @@ window.onload = (event) => {
     // handleInBlock3(fullPageObjectArr);
   } else {
     loadingBlock3(0);
-    loadingBlock7(0)
+    loadingBlock7(0);
   }
 };
 
