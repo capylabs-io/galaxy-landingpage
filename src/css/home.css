@@ -1,80 +1,122 @@
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500;700&display=swap");
+
 body {
   font-family: "Bai Jamjuree", sans-serif;
   overflow-x: hidden;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
+
+@media screen and (min-height: 650px) {
+  .mt-16-n {
+    margin-top: 16px;
+  }
+
+  .mt-32-n {
+    margin-top: 32px;
+  }
+  .mb-32-n {
+    margin-bottom: 32px;
+  }
+  .mb-48-n {
+    margin-bottom: 48px;
+  }
+  .mt-48-n {
+    margin-top: 48px;
+  }
+
+  .mt-4-n {
+    margin-top: 4px;
+  }
+
+  .mt-8-n {
+    margin-top: 8px;
+  }
+}
+
 @media screen and (min-width: 1280px) {
   .pc-page {
     display: block;
   }
+
   .mobile-page {
     display: none;
   }
 }
+
 @media screen and (max-width: 1179px) {
   .pc-page {
     display: none;
   }
+
   .mobile-page {
     display: block;
     overflow-x: hidden;
   }
 }
+
 body::-webkit-scrollbar {
   display: none;
 }
+
 .logo-img {
   width: 36px;
   height: 35px;
 }
+
 .brand-name-img {
   width: 102px;
   height: 32px;
 }
+
 .block-1 {
   height: 100vh;
   max-height: 1080px;
   min-height: 734px;
 }
+
 .block-1-right {
   position: relative;
-  background: linear-gradient(
-      70.11deg,
+  background: linear-gradient(70.11deg,
       rgba(198, 235, 255, 0.4) 0.4%,
       rgba(219, 238, 255, 0.4) 22.71%,
       rgba(198, 235, 255, 0.4) 49.68%,
       rgba(234, 231, 255, 0.4) 75.62%,
-      rgba(247, 247, 221, 0.4) 93.26%
-    ),
+      rgba(247, 247, 221, 0.4) 93.26%),
     #ffffff;
   border-radius: 30px;
   height: calc(100vh - 80px);
   max-height: calc(1080px - 80px);
   min-height: calc(734px - 80px);
 }
+
 .block-1-right img {
   position: absolute;
 }
+
 .phone-img {
   width: 9.75rem;
   height: auto;
   top: 0;
   left: 5.25rem;
 }
+
 .tether-img {
   width: 10rem;
   height: auto;
   top: 5.5rem;
   left: -6rem;
 }
+
 .chainlink-img {
   width: 11rem;
   height: auto;
   bottom: 2rem;
   right: 6.75rem;
 }
+
 .iphone-14-pro-img {
   width: 100%;
   height: auto;
@@ -83,53 +125,59 @@ body::-webkit-scrollbar {
   left: 0;
   border-radius: 0 0 0 30px;
 }
+
 .card-img {
   width: 15rem;
   height: auto;
   top: -2.5rem;
   right: -4rem;
 }
+
 .bitcoin-img {
   width: 15rem;
   height: auto;
   bottom: 7.5rem;
   right: -6rem;
 }
+
 .block-2 {
   overflow: hidden;
   height: 100vh;
   max-height: 1080px;
   min-height: 734px;
   padding: 4rem;
-  background: linear-gradient(
-      70.11deg,
+  background: linear-gradient(70.11deg,
       rgba(198, 235, 255, 0.4) 0.4%,
       rgba(219, 238, 255, 0.4) 22.71%,
       rgba(198, 235, 255, 0.4) 49.68%,
       rgba(234, 231, 255, 0.4) 75.62%,
-      rgba(247, 247, 221, 0.4) 93.26%
-    ),
+      rgba(247, 247, 221, 0.4) 93.26%),
     #ffffff;
 }
+
 .block-2-right {
   position: relative;
   height: 100%;
 }
+
 .trigger-2-img-block {
   position: absolute;
   max-height: 582px;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
+
 .trigger-img {
   position: absolute;
 }
+
 .portfolio-01 {
   position: relative;
   max-width: 457px;
   z-index: 50;
 }
+
 .portfolio-02 {
   position: absolute;
   bottom: 98px;
@@ -138,6 +186,7 @@ body::-webkit-scrollbar {
   height: 73px;
   z-index: 60;
 }
+
 .portfolio-03 {
   position: absolute;
   top: 0;
@@ -145,6 +194,7 @@ body::-webkit-scrollbar {
   height: 115px;
   z-index: 20;
 }
+
 .portfolio-04 {
   position: absolute;
   z-index: 60;
@@ -153,14 +203,16 @@ body::-webkit-scrollbar {
   width: 252px;
   height: 102px;
 }
+
 .trigger-1-img-block {
   position: absolute;
   width: 568px;
   height: 527px;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
+
 /* digital-avatar */
 .digital-01 {
   position: absolute;
@@ -170,6 +222,7 @@ body::-webkit-scrollbar {
   top: 115px;
   z-index: 30;
 }
+
 .digital-02 {
   position: absolute;
   width: 118px;
@@ -178,6 +231,7 @@ body::-webkit-scrollbar {
   left: 200px;
   z-index: 50;
 }
+
 .digital-03 {
   position: absolute;
   width: 114px;
@@ -186,6 +240,7 @@ body::-webkit-scrollbar {
   right: 45px;
   z-index: 50;
 }
+
 .digital-04 {
   position: absolute;
   width: 120px;
@@ -193,6 +248,7 @@ body::-webkit-scrollbar {
   top: -40px;
   left: 275px;
 }
+
 .digital-05 {
   position: absolute;
   width: 114px;
@@ -201,6 +257,7 @@ body::-webkit-scrollbar {
   top: 45px;
   z-index: 40;
 }
+
 .digital-06 {
   position: absolute;
   width: 162px;
@@ -209,6 +266,7 @@ body::-webkit-scrollbar {
   bottom: 160px;
   z-index: 50;
 }
+
 .digital-07 {
   position: absolute;
   width: 327px;
@@ -217,6 +275,7 @@ body::-webkit-scrollbar {
   left: 118px;
   z-index: 50;
 }
+
 .digital-08 {
   position: absolute;
   width: 162px;
@@ -225,6 +284,7 @@ body::-webkit-scrollbar {
   bottom: 60px;
   z-index: 50;
 }
+
 .digital-09 {
   position: absolute;
   width: 98px;
@@ -233,6 +293,7 @@ body::-webkit-scrollbar {
   top: 130px;
   z-index: 20;
 }
+
 .digital-10 {
   position: absolute;
   width: 98px;
@@ -241,14 +302,16 @@ body::-webkit-scrollbar {
   right: 55px;
   z-index: 40;
 }
+
 .trigger-3-img-block {
   position: absolute;
   width: 586px;
   height: 590px;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
+
 .social-01 {
   position: absolute;
   width: 100%;
@@ -256,6 +319,7 @@ body::-webkit-scrollbar {
   top: 0;
   left: 0;
 }
+
 .social-02 {
   position: absolute;
   opacity: 0;
@@ -264,6 +328,7 @@ body::-webkit-scrollbar {
   left: 129px;
   top: 154px;
 }
+
 .social-03 {
   position: absolute;
   opacity: 0;
@@ -272,6 +337,7 @@ body::-webkit-scrollbar {
   top: 28px;
   right: 75px;
 }
+
 .social-04 {
   position: absolute;
   opacity: 0;
@@ -280,6 +346,7 @@ body::-webkit-scrollbar {
   bottom: 39px;
   right: 109px;
 }
+
 .social-05 {
   position: absolute;
   opacity: 0;
@@ -288,6 +355,7 @@ body::-webkit-scrollbar {
   bottom: 18px;
   left: 160px;
 }
+
 .social-06 {
   position: absolute;
   opacity: 0;
@@ -296,6 +364,7 @@ body::-webkit-scrollbar {
   bottom: 209px;
   right: 0px;
 }
+
 .social-07 {
   position: absolute;
   opacity: 0;
@@ -304,6 +373,7 @@ body::-webkit-scrollbar {
   top: 28px;
   left: 129px;
 }
+
 .social-08 {
   position: absolute;
   opacity: 0;
@@ -312,6 +382,7 @@ body::-webkit-scrollbar {
   top: 264px;
   left: 41px;
 }
+
 .social-09 {
   position: absolute;
   opacity: 0;
@@ -320,6 +391,7 @@ body::-webkit-scrollbar {
   bottom: 4px;
   left: 265px;
 }
+
 .social-10 {
   position: absolute;
   opacity: 0;
@@ -328,6 +400,7 @@ body::-webkit-scrollbar {
   bottom: 115px;
   left: 20px;
 }
+
 .social-11 {
   position: absolute;
   opacity: 0;
@@ -336,6 +409,7 @@ body::-webkit-scrollbar {
   top: 15px;
   left: 236px;
 }
+
 .social-12 {
   position: absolute;
   opacity: 0;
@@ -344,13 +418,16 @@ body::-webkit-scrollbar {
   right: 40px;
   bottom: 160px;
 }
+
 .block-3 {
   position: relative;
   height: 100vh;
 }
+
 .bl3-content {
   height: calc(100vh - 4rem);
 }
+
 .block-3::before {
   content: "";
   position: absolute;
@@ -359,34 +436,37 @@ body::-webkit-scrollbar {
   z-index: 0;
   width: 100%;
   height: 20%;
-  background: linear-gradient(
-    90.99deg,
-    rgba(242, 165, 63, 0.15) -30.85%,
-    rgba(235, 83, 136, 0.15) 5.25%,
-    rgba(91, 21, 241, 0.15) 41.35%,
-    rgba(83, 170, 247, 0.15) 78.21%,
-    rgba(83, 247, 139, 0.15) 116.62%
-  );
+  background: linear-gradient(90.99deg,
+      rgba(242, 165, 63, 0.15) -30.85%,
+      rgba(235, 83, 136, 0.15) 5.25%,
+      rgba(91, 21, 241, 0.15) 41.35%,
+      rgba(83, 170, 247, 0.15) 78.21%,
+      rgba(83, 247, 139, 0.15) 116.62%);
   filter: blur(100px);
 }
+
 .slide {
   cursor: pointer;
 }
+
 .process-bar {
   width: 100%;
   height: 5px;
   background: rgba(10, 8, 58, 0.1);
   border-radius: 20px;
 }
+
 .step-img {
   position: relative;
   width: 120%;
   opacity: 0;
 }
+
 .step-img img {
   width: 100%;
   z-index: 100;
 }
+
 .step-img img::before {
   content: "";
   position: absolute;
@@ -398,17 +478,21 @@ body::-webkit-scrollbar {
   background: rgba(91, 197, 237, 0.2);
   filter: blur(75px);
 }
+
 @media screen and (max-width: 1440px) {
   .step-img {
     width: 100%;
   }
+
   .step-img img {
     min-width: 100%;
   }
+
   .step-img::before {
     width: 100%;
   }
 }
+
 .block-4 {
   position: relative;
   background-image: url("../assets/block-4/background.png");
@@ -420,17 +504,20 @@ body::-webkit-scrollbar {
   background-repeat: no-repeat;
   margin: auto;
 }
+
 .video-block {
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-55%);
 }
+
 .video-frame {
   position: relative;
   width: 836px;
   height: 575px;
 }
+
 .video-frame img {
   position: absolute;
   width: 100%;
@@ -438,6 +525,7 @@ body::-webkit-scrollbar {
   left: 0;
   top: 0;
 }
+
 .video-frame video {
   position: absolute;
   width: 716px;
@@ -446,74 +534,86 @@ body::-webkit-scrollbar {
   top: 36px;
   right: 0;
 }
+
 @media screen and (max-width: 1400px) {
   .video-frame {
     width: 689px;
     height: 522px;
   }
+
   .video-frame video {
     width: 590px;
     height: 458px;
     top: 30px;
   }
 }
+
 @media screen and (min-width: 1536px) {
   .video-frame {
     width: 859px;
     height: 649px;
   }
+
   .video-frame video {
     width: 736px;
     height: 558px;
     top: 36px;
   }
 }
-.block-4 .container{
+
+.block-4 .container {
   position: absolute;
   left: 50%;
   right: 50%;
   transform: translate(-50%, 100%);
 }
+
 .video-des {
   max-width: 360px;
 }
+
 .bg-block-4 {
-  background: linear-gradient(
-      70.11deg,
+  background: linear-gradient(70.11deg,
       rgba(198, 235, 255, 0.4) 0.4%,
       rgba(219, 238, 255, 0.4) 22.71%,
       rgba(198, 235, 255, 0.4) 49.68%,
       rgba(234, 231, 255, 0.4) 75.62%,
-      rgba(247, 247, 221, 0.4) 93.26%
-    ),
+      rgba(247, 247, 221, 0.4) 93.26%),
     #ffffff;
   border-radius: 1.875rem;
   padding: 1.875rem;
 }
+
 .digital-camera {
   display: flex;
   margin-left: 20px;
 }
+
 .ava-img {
   margin-left: -20px;
 }
+
 .ava-img img {
   width: 94px;
   max-width: none;
   animation: rotate-ava 1s ease-out;
 }
+
 .apple-watch {
   position: relative;
 }
+
 .apple-watch img {
   position: absolute;
   bottom: 0;
   right: 0;
 }
+
 .platforms-group {
   position: relative;
   height: 100%;
 }
+
 .platforms-group-img {
   position: absolute;
   bottom: 1.875rem;
@@ -521,27 +621,33 @@ body::-webkit-scrollbar {
   width: 100%;
   overflow: hidden;
 }
+
 .share-phone-img {
   object-position: 0px 32px;
 }
+
 .platforms-group-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 0px;
 }
+
 .block-6 .container {
   position: relative;
 }
+
 .block-6 .container .iphone-pro {
   position: absolute;
   top: 0;
   left: 6rem;
   max-height: 37.5rem;
 }
+
 .block-6 .container .iphone-pro img {
   max-height: 37.5rem;
 }
+
 .bl6-content {
   background-image: url("../assets/block-4/background.png");
   background-size: cover;
@@ -553,11 +659,13 @@ body::-webkit-scrollbar {
   justify-content: center;
   padding-left: 35%;
 }
+
 @media screen and (max-width: 1279px) {
   .bl6-content {
     padding-left: 42%;
   }
 }
+
 .block-7 {
   background-image: url("../assets/block-4/background.png");
   background-size: cover;
@@ -566,25 +674,27 @@ body::-webkit-scrollbar {
   max-height: 1080px;
   min-height: 734px;
 }
+
 .bl7-content {
   height: calc(100vh - 10rem);
   max-height: calc(1080px - 10rem);
   min-height: calc(734px - 10rem);
 }
+
 .item-content {
-  background: linear-gradient(
-    90.97deg,
-    #c4e0f5 0.83%,
-    #edf6fb 32.59%,
-    #a0cfe9 69.46%,
-    #a5bacd 99.17%
-  );
+  background: linear-gradient(90.97deg,
+      #c4e0f5 0.83%,
+      #edf6fb 32.59%,
+      #a0cfe9 69.46%,
+      #a5bacd 99.17%);
   box-shadow: 0px 11px 40px rgba(0, 118, 255, 0.1);
 }
+
 .icon {
   width: 24px;
   height: 24px;
 }
+
 .fullpage .top {
   display: none;
 }
@@ -598,13 +708,15 @@ body::-webkit-scrollbar {
     top: 0;
     left: 5.25rem;
   }
+
   .tether-img {
     position: absolute;
     width: 118px;
     height: auto;
     top: 5.5rem;
-    left:0rem;
+    left: 0rem;
   }
+
   .chainlink-img {
     position: absolute;
     width: 102px;
@@ -612,6 +724,7 @@ body::-webkit-scrollbar {
     bottom: 2rem;
     right: 0.75rem;
   }
+
   .iphone-14-pro-img {
     position: absolute;
     width: 100%;
@@ -620,6 +733,7 @@ body::-webkit-scrollbar {
     left: 0;
     border-radius: 0 0 0 30px;
   }
+
   .card-img {
     position: absolute;
     width: 124px;
@@ -627,6 +741,7 @@ body::-webkit-scrollbar {
     top: 0rem;
     right: 2rem;
   }
+
   .bitcoin-img {
     position: absolute;
     width: 165px;
@@ -634,34 +749,41 @@ body::-webkit-scrollbar {
     bottom: 165px;
     right: 0rem;
   }
+
   .ava-img img {
     width: 84px;
     max-width: none;
     animation: rotate-ava 1s ease-out;
   }
+
   .bg-block-4 {
     width: 100%;
     height: 335px;
   }
 }
+
 .m-block-1-right {
   position: relative;
-  background: linear-gradient( 70.11deg, rgba(198, 235, 255, 0.4) 0.4%, rgba(219, 238, 255, 0.4) 22.71%, rgba(198, 235, 255, 0.4) 49.68%, rgba(234, 231, 255, 0.4) 75.62%, rgba(247, 247, 221, 0.4) 93.26% ), #ffffff;
+  background: linear-gradient(70.11deg, rgba(198, 235, 255, 0.4) 0.4%, rgba(219, 238, 255, 0.4) 22.71%, rgba(198, 235, 255, 0.4) 49.68%, rgba(234, 231, 255, 0.4) 75.62%, rgba(247, 247, 221, 0.4) 93.26%), #ffffff;
   border-radius: 30px;
   min-height: 600px;
 }
+
 .m-block-2 {
   background: linear-gradient(70.11deg, rgba(198, 235, 255, 0.4) 0.4%, rgba(219, 238, 255, 0.4) 22.71%, rgba(198, 235, 255, 0.4) 49.68%, rgba(234, 231, 255, 0.4) 75.62%, rgba(247, 247, 221, 0.4) 93.26%), #FFFFFF;
 }
+
 .m-block-2-image {
   width: 100%;
   height: 100%;
 }
+
 .m-video-frame {
   position: relative;
   width: 335px;
   height: 219px;
 }
+
 .m-video-frame img {
   position: absolute;
   top: 0;
@@ -669,6 +791,7 @@ body::-webkit-scrollbar {
   width: 100%;
   height: 100%;
 }
+
 .m-video-frame video {
   position: absolute;
   top: 12px;
@@ -682,23 +805,26 @@ body::-webkit-scrollbar {
   background: rgba(0, 118, 255, 0.05);
 }
 
-.menu-item:hover{
+.menu-item:hover {
   color: #0076ff;
   background: rgba(0, 118, 255, 0.05);
   border-radius: 16px;
 }
+
 .dropdown {
   position: relative;
   display: inline-block;
 }
+
 .dropdown-content {
   min-width: 164px;
   display: none;
 }
+
 .dropdown-content.show-menu {
   display: block;
 }
 
-.overflow-hidden{
+.overflow-hidden {
   overflow: hidden;
 }
