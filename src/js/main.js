@@ -179,7 +179,7 @@ function handleInBlock2(fullPage) {
       fullPage[1].scrollIntoView();
     } else if (countTrigger > 2) {
       countTrigger = 3;
-      timer.clearTimeout();
+      clearTimeout(timer);
       loadingBlock3(0);
     }
   });
