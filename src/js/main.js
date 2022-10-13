@@ -47,7 +47,7 @@ window.onload = (event) => {
   fullPageObjectArr[3].addEventListener("scroll", function (event) {
     callDisplayTransaction(tranactionItems);
   });
-  // handleInBlock3(fullPageObjectArr);
+  handleInBlock3(fullPageObjectArr);
   if (window.innerWidth < 1179) {
     clearTimeout(timer);
     loadingBlock3(0);
@@ -55,6 +55,8 @@ window.onload = (event) => {
 };
 
 window.addEventListener("scroll", function (event) {
+  triggerForBlock2 = Array.from(fullPageObject)[1].scrollHeight + 0.75*window.innerHeight;
+  triggerForBlock2Bottom = Array.from(fullPageObject)[1].scrollHeight*1.25;
   callDisplayTransaction(tranactionItems);
 });
 function callDisplayTransaction(tranactionItems) {
