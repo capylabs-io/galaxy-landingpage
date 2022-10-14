@@ -878,9 +878,11 @@ body::-webkit-scrollbar {
     display: block !important;
     cursor: pointer;
     position: absolute;
-    top: 7%;
-    right: 2%;
+    top: 8%;
+    right: 1%;
     z-index: 1;
+    background-color: white !important;
+    border-radius: 50%;
   }
 }
 
@@ -983,7 +985,10 @@ body::-webkit-scrollbar {
 
 .close-button-mb {
   display: none;
+}
 
+.mb-close {
+  display: none;
 }
 
 .straight-line {
