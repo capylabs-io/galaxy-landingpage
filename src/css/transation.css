@@ -86,7 +86,7 @@
 .active .step-img {
   animation: tran-opacity 0.8s forwards;
 }
-@media screen and (max-width: 1179px) {
+@media screen and (max-width: 1195px) {
   .process-title {
     display: none;
     animation: tran-opacity-reverse 1s forwards;

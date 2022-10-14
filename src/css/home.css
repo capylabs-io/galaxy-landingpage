@@ -39,7 +39,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1180px) {
+@media screen and (min-width: 1196px) {
   .pc-page {
     display: block;
   }
@@ -49,7 +49,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1179px) {
+@media screen and (max-width: 1195px) {
   .pc-page {
     display: none;
   }
@@ -811,7 +811,7 @@ video::-webkit-media-controls-current-time-display {
   min-height: 600px;
 }
 
-@media screen and (max-width: 1179px) {
+@media screen and (max-width: 1195px) {
   .phone-img {
     position: absolute;
     width: 134px;

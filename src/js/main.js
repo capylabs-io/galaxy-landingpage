@@ -46,11 +46,11 @@ window.onclick = function (event) {
 };
 
 window.onload = (event) => {
-  document.getElementById('video-player').controls = false;
+  // document.getElementById('video-player').controls = false;
   Array.from(tranactionBlock1).forEach((item) => {
       item.classList.add("show");
   });
-  if (window.innerWidth >= 1180) {
+  if (window.innerWidth >= 1196) {
     const fullPageObjectArr = Array.from(fullPageObject);
     handleInBlock1(fullPageObjectArr);
     handleInBlock2(fullPageObjectArr);
@@ -91,7 +91,7 @@ function onClickLoadBlock3(index) {
 async function loadingBlock3(index) {
   let processBar;
   let activeElement;
-  if (window.innerWidth >= 1180) {
+  if (window.innerWidth >= 1196) {
     processBar = Array.from(document.getElementsByClassName("slide"));
     activeElement = Array.from(document.getElementsByClassName("slide active"));
   } else {
@@ -107,7 +107,7 @@ async function loadingBlock3(index) {
   });
   // add active class
   processBar[index].classList.add("active");
-  if (window.innerWidth < 1179) {
+  if (window.innerWidth < 1196) {
     processBar[index + 3].classList.add("active");
   }
 
