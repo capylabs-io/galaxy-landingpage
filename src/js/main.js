@@ -46,7 +46,7 @@ window.onclick = function (event) {
 };
 
 window.onload = (event) => {
-  // document.getElementById('video-player').controls = false;
+  document.getElementById('video-player').controls = false;
   Array.from(tranactionBlock1).forEach((item) => {
       item.classList.add("show");
   });
