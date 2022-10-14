@@ -54,6 +54,7 @@ window.onload = (event) => {
     const fullPageObjectArr = Array.from(fullPageObject);
     handleInBlock1(fullPageObjectArr);
     handleInBlock2(fullPageObjectArr);
+    handleInBlock3(fullPageObjectArr);
     // handleInBlock3(fullPageObjectArr);
   } else {
     loadingBlock3(0);
@@ -191,10 +192,19 @@ function handleInBlock2(fullPage) {
       countTrigger = 3;
       clearTimeout(timer);
       loadingBlock3(0);
+      fullPage[2].classList.add('processimg');
     }
   });
 }
-
+function handleInBlock3(fullPage) {
+  fullPage[2].addEventListener("wheel", function (e) {
+    if (!fullPage[2].classList.contains('processimg')) {
+      loadingBlock3(0);
+      countTrigger = 3;
+      isUserScrolling = false;
+    }
+  })
+}
 function preventScroll(e) {
   e.preventDefault();
   e.stopPropagation();
