@@ -200,6 +200,7 @@ function handleInBlock3(fullPage) {
   fullPage[2].addEventListener("wheel", function (e) {
     if (!fullPage[2].classList.contains('processimg')) {
       loadingBlock3(0);
+      fullPage[2].classList.add('processimg');
       countTrigger = 3;
       isUserScrolling = false;
     }
