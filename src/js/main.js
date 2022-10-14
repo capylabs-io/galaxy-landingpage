@@ -11,10 +11,6 @@ var timer;
 var timer2;
 var countTrigger = 0;
 var isUserScrolling = false;
-var video=getElementsByTagName('video');
-function removeControls(video){
-  video.removeAttribute('controls');
-}
 //menu
 function toggleMenu() {
   var dropdownMenu = document.getElementById("dropdown-menu");
@@ -50,7 +46,6 @@ window.onclick = function (event) {
 };
 
 window.onload = (event) => {
-  removeControls();
   Array.from(tranactionBlock1).forEach((item) => {
       item.classList.add("show");
   });
