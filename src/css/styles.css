@@ -1,4 +1,8 @@
 /* text-size */
+.font-12 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
 .font-16 {
     font-size: 1rem;
     line-height: 1.25rem;
@@ -63,6 +67,9 @@
 .max-w-616 {
     max-width: 38.5rem;
 }
+.w-335 {
+  width: 335px;
+}
 /* border-radius */
 .round-30 {
     border-radius: 30px;
@@ -77,6 +84,9 @@
 .mt-30 {
     margin-top: 30px;
 }
+.-ml-88 {
+  margin-left: -5.5rem;
+}
 /* padding */
 .pt-30 {
     padding-top: 1.875rem;
@@ -90,4 +100,10 @@
 .icon {
   width: 20px;
   height: 20px;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.top-130 {
+  top: 130px;
 }
