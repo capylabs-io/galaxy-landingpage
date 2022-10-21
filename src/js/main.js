@@ -81,7 +81,6 @@ const getGalaxyTokenInfo = async () => {
   //   }
   // });
   const myJson = await response.json();
-  console.log(myJson["galaxy-finance"]);
   let price = formatter.format(myJson["galaxy-finance"].usd);
   let change = parseFloat(myJson["galaxy-finance"].usd_24h_change).toFixed(2)
   document.getElementById("price-usd").innerHTML=price;
@@ -96,7 +95,6 @@ const getGalaxyTokenInfo = async () => {
   timer = setTimeout(function () {
     getGalaxyTokenInfo();
   }, 50000);
-  // do something with myJson
 }
 
 window.addEventListener("scroll", function (event) {
