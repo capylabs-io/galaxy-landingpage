@@ -72,7 +72,7 @@ window.onload = (event) => {
 };
 
 const getGalaxyTokenInfo = async () => {
-  const response = await fetch('https://api.pancakeswap.info/api/v2/tokens/0xE77932B1216125848e82C3967e75698362168f99');
+  const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=galaxy-finance&vs_currencies=usd&include_24hr_change=true');
   // const myJson = await response.json(); //extract JSON from the http response
   // const response = await fetch('https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
   //   method: 'POST',
@@ -81,12 +81,21 @@ const getGalaxyTokenInfo = async () => {
   //   }
   // });
   const myJson = await response.json();
-  let price = formatter.format(myJson.data.price);
+  console.log(myJson["galaxy-finance"]);
+  let price = formatter.format(myJson["galaxy-finance"].usd);
+  let change = parseFloat(myJson["galaxy-finance"].usd_24h_change).toFixed(2)
   document.getElementById("price-usd").innerHTML=price;
-  console.log(myJson.data);
+  document.getElementById("price-change").innerHTML=change+"%";
+  if (change < 0) {
+    document.getElementById("price-change-arrow").classList.remove("price-change-up");
+    document.getElementById("price-change-arrow").classList.add("price-change-down");
+  } else {
+    document.getElementById("price-change-arrow").classList.add("price-change-up");
+    document.getElementById("price-change-arrow").classList.remove("price-change-down");
+  }
   timer = setTimeout(function () {
     getGalaxyTokenInfo();
-  }, 5000);
+  }, 50000);
   // do something with myJson
 }
 

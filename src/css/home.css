@@ -170,7 +170,7 @@ body::-webkit-scrollbar {
   border-radius: 80px;
 }
 
-.arrow-up {
+.price-change-up .arrow {
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -178,9 +178,24 @@ body::-webkit-scrollbar {
   border-bottom: 5px solid white;
 }
 
-.bg-green {
+.price-change-down .arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid white;
+}
+
+.price-change-up {
   background-color: #21b661;
-  width: 54px;
+  width: 56px;
+  height: 23px;
+  border-radius: 10px;
+}
+
+.price-change-down {
+  background-color: red;
+  width: 56px;
   height: 23px;
   border-radius: 10px;
 }
