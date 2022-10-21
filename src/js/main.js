@@ -73,24 +73,29 @@ window.onload = (event) => {
 
 const getGalaxyTokenInfo = async () => {
   const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=galaxy-finance&vs_currencies=usd&include_24hr_change=true');
-  // const myJson = await response.json(); //extract JSON from the http response
-  // const response = await fetch('https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
-  //   method: 'POST',
-  //   headers: {
-  //     'X-CMC_PRO_API_KEY': 'b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c'
-  //   }
-  // });
   const myJson = await response.json();
   let price = formatter.format(myJson["galaxy-finance"].usd);
   let change = parseFloat(myJson["galaxy-finance"].usd_24h_change).toFixed(2)
-  document.getElementById("price-usd").innerHTML=price;
-  document.getElementById("price-change").innerHTML=change+"%";
-  if (change < 0) {
-    document.getElementById("price-change-arrow").classList.remove("price-change-up");
-    document.getElementById("price-change-arrow").classList.add("price-change-down");
+  if (window.innerWidth >= 1196) {
+    document.getElementById("price-usd").innerHTML=price;
+    document.getElementById("price-change").innerHTML=change+"%";
+    if (change < 0) {
+      document.getElementById("price-change-arrow").classList.remove("price-change-up");
+      document.getElementById("price-change-arrow").classList.add("price-change-down");
+    } else {
+      document.getElementById("price-change-arrow").classList.add("price-change-up");
+      document.getElementById("price-change-arrow").classList.remove("price-change-down");
+    }
   } else {
-    document.getElementById("price-change-arrow").classList.add("price-change-up");
-    document.getElementById("price-change-arrow").classList.remove("price-change-down");
+    document.getElementById("m-price-usd").innerHTML=price;
+    document.getElementById("m-price-change").innerHTML=change+"%";
+    if (change < 0) {
+      document.getElementById("m-price-change-arrow").classList.remove("price-change-up");
+      document.getElementById("m-price-change-arrow").classList.add("price-change-down");
+    } else {
+      document.getElementById("m-price-change-arrow").classList.add("price-change-up");
+      document.getElementById("m-price-change-arrow").classList.remove("price-change-down");
+    }
   }
   timer = setTimeout(function () {
     getGalaxyTokenInfo();
