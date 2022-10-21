@@ -11,6 +11,13 @@ var timer;
 var timer2;
 var countTrigger = 0;
 var isUserScrolling = false;
+var oldPrice = 0;
+const formatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  maximumSignificantDigits: 4
+});
+
 //menu
 function toggleMenu() {
   var dropdownMenu = document.getElementById("dropdown-menu");
@@ -47,9 +54,11 @@ window.onclick = function (event) {
 
 window.onload = (event) => {
   document.getElementById('video-player').controls = false;
+  getGalaxyTokenInfo();
   Array.from(tranactionBlock1).forEach((item) => {
       item.classList.add("show");
   });
+  
   if (window.innerWidth >= 1196) {
     const fullPageObjectArr = Array.from(fullPageObject);
     handleInBlock1(fullPageObjectArr);
@@ -61,6 +70,25 @@ window.onload = (event) => {
     loadingBlock7(0);
   }
 };
+
+const getGalaxyTokenInfo = async () => {
+  const response = await fetch('https://api.pancakeswap.info/api/v2/tokens/0xE77932B1216125848e82C3967e75698362168f99');
+  // const myJson = await response.json(); //extract JSON from the http response
+  // const response = await fetch('https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
+  //   method: 'POST',
+  //   headers: {
+  //     'X-CMC_PRO_API_KEY': 'b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c'
+  //   }
+  // });
+  const myJson = await response.json();
+  let price = formatter.format(myJson.data.price);
+  document.getElementById("price-usd").innerHTML=price;
+  console.log(myJson.data);
+  timer = setTimeout(function () {
+    getGalaxyTokenInfo();
+  }, 5000);
+  // do something with myJson
+}
 
 window.addEventListener("scroll", function (event) {
   callDisplayTransaction(tranactionItems);
